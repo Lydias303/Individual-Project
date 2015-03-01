@@ -1,7 +1,6 @@
-<div class="logo"><%= image_tag "logo2.png" %></div>
-<div class="row home-search-bar">
-  <div class="col-md-2 col-md-offset-5"
-    <form id="search-form" class="form-inline" role="form" method="post" action="/" target="_blank">
+   <div class="row">
+     <div class="col-md-2 home-search-bar">
+     <form id="search-form" class="form-inline search-bar" role="form" method="post" action="/" target="_blank">
       <div class="input-group">
         <input type="text" class="form-control search-form" placeholder="Search By State">
           <span class="input-group-btn">
@@ -9,14 +8,95 @@
           </span>
         </div>
       </form>
-    </div>
+    <form id="search-form" class="form-inline search-bar" role="form" method="post" action="/" target="_blank">
+     <div class="input-group">
+       <input type="text" class="form-control search-form" placeholder="Search By Date">
+         <span class="input-group-btn">
+           <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search"></i></button>
+         </span>
+       </div>
+     </form>
+   <form id="search-form" class="form-inline search-bar" role="form" method="post" action="/" target="_blank">
+    <div class="input-group">
+      <input type="text" class="form-control search-form" placeholder="Search By Artist">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search"></i></button>
+        </span>
+      </div>
+    </form>
   </div>
+  <div class="col-md-8 logo">
+    <%= image_tag "logo2.png" %>
+  </div>
+  </div>
+
+  <div class="featured-logo"><%= image_tag "feat-logo2.png" %></div>
 
 <div class="row">
   <div class="well col-md-3 col-md-offset-2 first-well">
+    <%#= image_tag "summer-camp.png" %>
+    <a href="http://summercampfestival.com/">
+  <div class="new-overlay">
+    <div class="home-text">
+      Summer Camp
+    </div>
+  </div>
+  <div class="new-overlay">
+    <div class="like-heart">
+      <i class="fa fa-heart"></i>
+    </div>
+  </div>
   </div>
   <div class="well col-md-2 second-well">
+    <%#= image_tag "all-good.jpg" %>
+    <a href="http://allgoodfestival.com/">
+  <div class="new-overlay">
+    <div class="home-text">
+      All Good
+    </div>
+  </div>
+  <div class="new-overlay">
+    <div class="like-heart">
+      <i class="fa fa-heart"></i>
+    </div>
+  </div>
   </div>
   <div class="well col-md-4 col-md-offset-1 third-well">
+    <div class="row">
+      <div class="pull-right like-heart">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+    <a href="http://www.arisefestival.com/2015/"><%= image_tag "arise-logo.png" %></a>
+    </div>
+
+  <div class="row">
+  <div class="well col-md-2 fifth-well">
+    <%#= image_tag "all-good.jpg" %>
+    <div class="row">
+      <div class="pull-right like-heart">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+    <a href="http://allgoodfestival.com/"><%= image_tag "all-good.gif" %></a>
   </div>
+
+  <div class="well col-md-3 col-md-offset-2 fourth-well">
+    <%#= image_tag "summer-camp.png" %>
+    <div class="row">
+      <div class="pull-right like-heart">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+    <a href="http://summercampfestival.com/"><h1> Summer Camp </h1></a>
+  </div>
+
+  <div class="well col-md-4 sixth-well">
+    <%#= image_tag "snowball.jpg" %>
+    <div class="row">
+      <div class="pull-right like-heart">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+    <a href="http://www.snowballmusicfestival.com/"><h1> Snow Ball </h1></a>
 </div>
