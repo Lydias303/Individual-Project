@@ -54,8 +54,7 @@ body {
   font-family: 'ostrich';
   font-size: 22px;
   font-weight: bold;
-  background: linear-gradient(rgba(240, 240, 230, 0.7), rgba(240, 240, 230, 0.7)), url(/assets/crowd.jpg) center center fixed no-repeat;
-
+  background: linear-gradient(rgba(240, 240, 230, 0.7), rgba(240, 240, 230, 0.7)), image-url('crowd.jpg') center center fixed no-repeat;
 }
 
 h1 {
