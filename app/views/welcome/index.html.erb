@@ -1,34 +1,33 @@
    <div class="row">
-     <div class="col-md-2 home-search-bar">
-     <form id="search-form" class="form-inline search-bar" role="form" method="post" action="/" target="_blank">
+  <div class="col-md-12 logo">
+    <%= image_tag "search-button.png" %>
+      <%= image_tag "logo2.png" %>
+    <%= image_tag "browse-button.png" %>
+  </div>
+  </div>
+
+
+<!-- <div class="row">
+  <div class="col-md-4 col-md-offset-3 home-search-bar">
+    <div class="form-group" style="display:inline;">
       <div class="input-group">
-        <input type="text" class="form-control search-form" placeholder="Search By State">
-          <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search"></i></button>
-          </span>
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">State</a></li>
+              <li><a href="#">City</a></li>
+              <li><a href="#">Artist</a></li>
+              <li><a href="#">Camping</a></li>
+              <li><a href="#">Month</a></li>
+            </ul>
+          </div>
+          <input class="form-control" placeholder="What are searching for?" type="text">
+          <span class="input-group-addon"><span class="fa fa-search"></span> </span>
         </div>
-      </form>
-    <form id="search-form" class="form-inline search-bar" role="form" method="post" action="/" target="_blank">
-     <div class="input-group">
-       <input type="text" class="form-control search-form" placeholder="Search By Date">
-         <span class="input-group-btn">
-           <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search"></i></button>
-         </span>
-       </div>
-     </form>
-   <form id="search-form" class="form-inline search-bar" role="form" method="post" action="/" target="_blank">
-    <div class="input-group">
-      <input type="text" class="form-control search-form" placeholder="Search By Artist">
-        <span class="input-group-btn">
-          <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search"></i></button>
-        </span>
       </div>
-    </form>
-  </div>
-  <div class="col-md-8 logo">
-    <%= image_tag "logo2.png" %>
-  </div>
-  </div>
+    </div>
+  </div> -->
+
 
   <div class="featured-logo"><%= image_tag "feat-logo2.png" %></div>
 
@@ -59,7 +58,7 @@
         <i class="fa fa-heart"></i>
       </div>
     </div>
-    <a href="http://www.arisefestival.com/2015/"><%= image_tag "arise-logo.png" %></a>
+    <a href="http://www.arisefestival.com/2015/"><%= image_tag "arise2-logo.png" %></a>
     </div>
 
   <div class="row clearfix">
@@ -78,7 +77,9 @@
         <i class="fa fa-heart"></i>
       </div>
     </div>
+    <div class="fifth-img">
     <a href="http://summercampfestival.com/"><%= image_tag "summercamp-logo.png" %></a>
+  </div>
   </div>
 
   <div class="well col-md-4 clearfix sixth-well">
@@ -89,3 +90,8 @@
     </div>
     <a href="http://hangoutmusicfest.com/"><%= image_tag "homefest-logo.png" %></a>
     </div>
+<div id="row footer">
+  <div class="col-md-12">
+  <%= render 'shared/footer' %>
+</div>
+</div>
