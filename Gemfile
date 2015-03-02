@@ -18,6 +18,9 @@ gem 'bootstrap-sass'
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "bootstrap_form"
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
+gem 'bootstrap-modal-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

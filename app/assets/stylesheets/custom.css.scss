@@ -53,8 +53,13 @@
 body {
   font-family: 'ostrich';
   font-size: 22px;
+  font-weight: bold;
   background: linear-gradient(rgba(240, 240, 230, 0.7), rgba(240, 240, 230, 0.7)), url(/assets/crowd.jpg) center center fixed no-repeat;
 
+}
+
+h1 {
+  font-weight: bold;
 }
 // /* =========================
 //
@@ -75,6 +80,10 @@ div.navbar-header {
 a {
   color: black;
   text-decoration: none;
+}
+
+.nav-likes {
+  margin-top: -3px;
 }
 
 // /* =========================
@@ -238,4 +247,21 @@ a {
 
 #networks .mail:hover {
   color: rgba(245, 162, 94, 0.88);
+}
+
+
+// /* =========================
+//
+//      event index
+//
+//    =========================*/
+
+.search-side-bar {
+  padding: 20px;
+  background:rgba(166, 165, 160, 0.7);
+  margin-top: 30px;
+}
+
+.mock-map {
+  margin-top: 10px;
 }

@@ -1,15 +1,21 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-header">
-      <div class="form-inline">
-  <%= bootstrap_form_tag url: "/listings", method: "get" do |f| %>
-    <%= f.text_field :city, hide_label: true, placeholder: "City", class: "connector" %>
-    <%= f.select :category_id, options_for_select(categories_helper), hide_label: true, class: "connector" %>
-    <%= f.select :nightly_rate, options_for_select(nightly_rate_helper), hide_label: true, class: "connector" %>
-    <%= f.text_field :check_in, hide_label: true, placeholder: "Check In", class: "from_date connector", contenteditable: false %>
-    <%= f.text_field :check_out, hide_label: true, placeholder: "Check Out", class: "to_date connector", contenteditable: false %>
-    <%= f.select :max_guests, options_for_select(guests_helper), hide_label: true, class: "connector", placeholder: "Guests" %>
-    <%= f.submit "Filter", class: "btn btn-primary connector" %>
+<div class="row">
+<div class="col-md-3">
+<div class="navbar navbar-default navbar-fixed-side navbar-fixed-side-left search-side-bar">
+  <div id="sidebar" class="sidebar-offcanvas">
+      <h1>Advanced Search</h1>
+      <ul class="nav nav-pills nav-stacked">
+      <div class="form">
+        <ul class="nav nav-pills nav-stacked">
+        <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
+        <li><%= f.text_field :city, placeholder: "City", class: "connector" %></li>
+        <li><%= f.text_field :state, placeholder: "State", class: "connector" %></li>
+        <li><%= f.text_field :start_date, placeholder: "End Date", class: "from_date connector", contenteditable: false %></li>
+        <li><%= f.text_field :end_date, placeholder: "Start Date", class: "to_date connector", contenteditable: false %></li>
+        <li><%= f.select :amenities, hide_label: true, class: "connector", placeholder: "Amenities" %></li>
+        <li><%= f.select :camping, hide_label: true, class: "connector", placeholder: "Camping" %></li>
+        <li><%= f.submit "Filter", class: "btn btn-default connector" %></li>
   <% end %>
+</ul>
 </div>
 </div>
 </div>
