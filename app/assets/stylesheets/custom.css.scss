@@ -96,7 +96,12 @@ a {
   text-align: center;
 }
 
+// .featured {
+//   background: rgba(0, 0, 0, 0.53);
+// }
+
 .first-well {
+  box-shadow: none;
   background: transparent;
   border: none;
   margin-top: 40px;
@@ -110,6 +115,7 @@ a {
  }
 
 .second-well {
+ box-shadow: none;
  background: transparent;
  border: none;
  margin-top: 40px;
@@ -123,6 +129,7 @@ a {
 }
 
 .third-well {
+ box-shadow: none;
  background: transparent;
  border: none;
  margin-top: 40px;
@@ -135,6 +142,7 @@ a {
 }
 
 .fourth-well {
+  box-shadow: none;
   background: transparent;
   border: none;
   // margin-top: 200px;
@@ -149,6 +157,7 @@ a {
  }
 
 .fifth-well {
+ box-shadow: none;
  background: transparent;
  border: none;
  margin-top: 0;
@@ -161,6 +170,7 @@ a {
 }
 
 .sixth-well {
+ box-shadow: none;
  background: transparent;
  border: transparent;
  margin-top: 0;
@@ -255,12 +265,33 @@ a {
 //
 //    =========================*/
 
-.search-side-bar {
-  padding: 20px;
-  background:rgba(166, 165, 160, 0.7);
-  margin-top: 30px;
-}
+// .search-side-bar {
+//   padding: 20px;
+//   background:rgba(166, 165, 160, 0.7);
+//   margin-top: 30px;
+// }
 
 .mock-map {
-  margin-top: 10px;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 31px;
+  font-weight: bold;
+}
+
+/* custom inclusion of right, left and below tabs */
+//
+.search-tabs {
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-bottom: 80px;
+}
+
+.basic {
+ color: #7bd5b8;
+}
+
+.advanced {
+  color: rgba(245, 162, 94, 0.88);
 }

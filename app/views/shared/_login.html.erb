@@ -1,0 +1,16 @@
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class-"modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <%= bootstrap_form_for :session, url: login_path do |f| %>
+          <%= f.text_field :email %>
+
+          <%= f.password_field :password %>
+          <%= f.submit "Log In" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
