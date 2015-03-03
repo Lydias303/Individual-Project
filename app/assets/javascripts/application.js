@@ -55,3 +55,7 @@ $(".to_date")
         $(".from_date").datepicker("setEndDate", FromEndDate);
     });
 });
+
+$('.dropdown-toggle').dropdown();
+
+// $('.nav nav-tabs a[href="#one"]').toggle();

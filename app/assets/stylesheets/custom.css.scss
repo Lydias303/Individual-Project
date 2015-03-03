@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'ostrich';
-    src: url('fonts/fonts/ostrich-regular-webfont.eot');
-    src: url('fonts/ostrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ostrich-regular-webfont.woff2') format('woff2'),
-         url('fonts/ostrich-regular-webfont.woff') format('woff'),
-         url('fonts/ostrich-regular-webfont.ttf') format('truetype'),
-         url('fonts/ostrich-regular-webfont.svg#ostrich_sansmedium') format('svg');
+    src: font-url('fonts/fonts/ostrich-regular-webfont.eot');
+    src: font-url('fonts/ostrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('fonts/ostrich-regular-webfont.woff2') format('woff2'),
+         font-url('fonts/ostrich-regular-webfont.woff') format('woff'),
+         font-url('fonts/ostrich-regular-webfont.ttf') format('truetype'),
+         font-url('fonts/ostrich-regular-webfont.svg#ostrich_sansmedium') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -13,12 +13,12 @@
 
 @font-face {
   font-family: 'ostrich';
-    src: url('fonts/ostrich-bold-webfont.eot');
-    src: url('fonts/ostrich-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ostrich-bold-webfont.woff2') format('woff2'),
-         url('fonts/ostrich-bold-webfont.woff') format('woff'),
-         url('fonts/ostrich-bold-webfont.ttf') format('truetype'),
-         url('fonts/ostrich-bold-webfont.svg#ostrich_sansbold') format('svg');
+    src: font-url('fonts/ostrich-bold-webfont.eot');
+    src: font-url('fonts/ostrich-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('fonts/ostrich-bold-webfont.woff2') format('woff2'),
+         font-url('fonts/ostrich-bold-webfont.woff') format('woff'),
+         font-url('fonts/ostrich-bold-webfont.ttf') format('truetype'),
+         font-url('fonts/ostrich-bold-webfont.svg#ostrich_sansbold') format('svg');
     font-weight: bold;
     font-style: normal;
 
@@ -26,12 +26,12 @@
 
 @font-face {
     font-family: 'ostrich';
-    src: url('fonts/ostrich-light-webfont.eot');
-    src: url('fonts/ostrich-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ostrich-light-webfont.woff2') format('woff2'),
-         url('fonts/ostrich-light-webfont.woff') format('woff'),
-         url('fonts/ostrich-light-webfont.ttf') format('truetype'),
-         url('fonts/ostrich-light-webfont.svg#ostrich_sanscondensed_light') format('svg');
+    src: font-url('fonts/ostrich-light-webfont.eot');
+    src: font-url('fonts/ostrich-light-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('fonts/ostrich-light-webfont.woff2') format('woff2'),
+         font-url('fonts/ostrich-light-webfont.woff') format('woff'),
+         font-url('fonts/ostrich-light-webfont.ttf') format('truetype'),
+         font-url('fonts/ostrich-light-webfont.svg#ostrich_sanscondensed_light') format('svg');
     font-weight: light;
     font-style: normal;
 
@@ -39,12 +39,12 @@
 
 @font-face {
     font-family: 'ostrich_sansblack';
-    src: url('fonts/ostrich-black-webfont.eot');
-    src: url('fonts/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ostrich-black-webfont.woff2') format('woff2'),
-         url('fonts/ostrich-black-webfont.woff') format('woff'),
-         url('fonts/ostrich-black-webfont.ttf') format('truetype'),
-         url('fonts/ostrich-black-webfont.svg#ostrich_sansblack') format('svg');
+    src: font-url('fonts/ostrich-black-webfont.eot');
+    src: font-url('fonts/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('fonts/ostrich-black-webfont.woff2') format('woff2'),
+         font-url('fonts/ostrich-black-webfont.woff') format('woff'),
+         font-url('fonts/ostrich-black-webfont.ttf') format('truetype'),
+         font-url('fonts/ostrich-black-webfont.svg#ostrich_sansblack') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -54,8 +54,7 @@ body {
   font-family: 'ostrich';
   font-size: 22px;
   font-weight: bold;
-  background: linear-gradient(rgba(240, 240, 230, 0.7), rgba(240, 240, 230, 0.7)), url(/assets/crowd.jpg) center center fixed no-repeat;
-
+  background: linear-gradient(rgba(240, 240, 230, 0.7), rgba(240, 240, 230, 0.7)), image-url('crowd.jpg') center center fixed no-repeat;
 }
 
 h1 {
@@ -97,7 +96,12 @@ a {
   text-align: center;
 }
 
+// .featured {
+//   background: rgba(0, 0, 0, 0.53);
+// }
+
 .first-well {
+  box-shadow: none;
   background: transparent;
   border: none;
   margin-top: 40px;
@@ -111,6 +115,7 @@ a {
  }
 
 .second-well {
+ box-shadow: none;
  background: transparent;
  border: none;
  margin-top: 40px;
@@ -124,6 +129,7 @@ a {
 }
 
 .third-well {
+ box-shadow: none;
  background: transparent;
  border: none;
  margin-top: 40px;
@@ -136,6 +142,7 @@ a {
 }
 
 .fourth-well {
+  box-shadow: none;
   background: transparent;
   border: none;
   // margin-top: 200px;
@@ -150,6 +157,7 @@ a {
  }
 
 .fifth-well {
+ box-shadow: none;
  background: transparent;
  border: none;
  margin-top: 0;
@@ -162,8 +170,9 @@ a {
 }
 
 .sixth-well {
+ box-shadow: none;
  background: transparent;
- border: none;
+ border: transparent;
  margin-top: 0;
  margin-right: 100px;
  margin-bottom: 10px;
@@ -256,12 +265,44 @@ a {
 //
 //    =========================*/
 
-.search-side-bar {
-  padding: 20px;
-  background:rgba(166, 165, 160, 0.7);
-  margin-top: 30px;
-}
+// .search-side-bar {
+//   padding: 20px;
+//   background:rgba(166, 165, 160, 0.7);
+//   margin-top: 30px;
+// }
 
 .mock-map {
-  margin-top: 10px;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 31px;
+  font-weight: bold;
+}
+
+/* custom inclusion of right, left and below tabs */
+//
+.search-tabs {
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-bottom: 80px;
+}
+
+.basic {
+ color: #7bd5b8;
+}
+
+.advanced {
+  color: rgba(245, 162, 94, 0.88);
+}
+
+// /* =========================
+//
+//      login
+//
+//    =========================*/
+
+a.zocial.facebook {
+  font-size: 10px;
+  text-align: center;
 }
