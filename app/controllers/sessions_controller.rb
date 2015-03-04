@@ -10,8 +10,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  def auth
-    (request.env['omniauth.auth'])
+`  def auth
+    (request.env['omniauth.auth'])`
   end
 
   def destroy
