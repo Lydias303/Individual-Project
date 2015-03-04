@@ -24,6 +24,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
 gem 'bootstrap-modal-rails'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+gem 'figaro'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
