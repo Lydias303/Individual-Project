@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304054015) do
+ActiveRecord::Schema.define(version: 20150304191521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artists", force: :cascade do |t|
+    t.string   "display_name"
+    t.string   "uri"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string   "display_name"
@@ -37,6 +44,21 @@ ActiveRecord::Schema.define(version: 20150304054015) do
     t.string   "oauth_token"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "venues", force: :cascade do |t|
+    t.string   "display_name"
+    t.string   "country"
+    t.string   "city"
+    t.string   "zip"
+    t.decimal  "lat"
+    t.decimal  "lng"
+    t.string   "street"
+    t.string   "website"
+    t.string   "description"
+    t.integer  "capacity"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

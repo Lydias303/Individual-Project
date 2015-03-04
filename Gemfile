@@ -25,6 +25,7 @@ gem 'bootstrap-modal-rails'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem 'figaro'
+gem 'faker'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
