@@ -57,5 +57,3 @@ $(".to_date")
 });
 
 $('.dropdown-toggle').dropdown();
-
-// $('.nav nav-tabs a[href="#one"]').toggle();
