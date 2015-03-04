@@ -13,7 +13,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-gem 'bootstrap-modal-rails'
 gem 'font-awesome-less'
 gem "therubyracer"
 gem 'bootstrap-sass'
@@ -23,6 +22,9 @@ gem "bootstrap_form"
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
 gem 'bootstrap-modal-rails'
+gem 'omniauth'
+gem 'omniauth-facebook', '1.4.0'
+gem 'figaro'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
