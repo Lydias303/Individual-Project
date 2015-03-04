@@ -13,7 +13,7 @@ Rails.application.routes.draw do
    delete "/logout", to: "sessions#destroy"
 
    get 'auth/:provider/callback', to: 'sessions#create'
-
+   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
