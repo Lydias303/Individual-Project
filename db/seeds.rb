@@ -55,10 +55,14 @@ class Seed
         datetime:          Faker::Time.forward(200, :evening),
         age_restriction:   rand(14..21),
         popularity:        rand(0.1..0.9),
-        venue_id:  rand(0..10),
-        artist_id: rand(0..20)
+        venue_id:          rand(0..10),
+        artist_id:         rand(0..20),
+        city:              Faker::Address.city,
+        lat:               Faker::Address.latitude,
+        lng:               Faker::Address.longitude,
+        location:          Faker::Address.street_address
       )
-      puts "Venue #{event.display_name} was created!"
+      puts "Events #{event.display_name} was created!"
     end
   end
 end
