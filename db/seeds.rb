@@ -56,7 +56,8 @@ class Seed
         age_restriction:   rand(14..21),
         popularity:        rand(0.1..0.9),
         venue_id:  rand(0..10),
-        artist_id: rand(0..20)
+        artist_id: rand(0..20),
+        location: 
       )
       puts "Venue #{event.display_name} was created!"
     end
