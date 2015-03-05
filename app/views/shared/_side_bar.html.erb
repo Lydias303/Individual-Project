@@ -1,70 +1,43 @@
-
-
-<div class="container search-tabs">
-  <div class="row">
-    <div class="col-md-4">
-        <!-- tabs -->
+<div class="tabbable search-tabs">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#one" data-toggle="tab" class="basic">Basic Search</a></li>
+    <li><a href="#twee" data-toggle="tab" class="advanced">Advanced Search</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="one">
+      <h2>Basic Search <i class="fa fa-search"></i></h2>
+      <div class="tabbable">
+        <div class="form">
+          <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
+            <%= f.text_field :artist, placeholder: "Artist", class: "connector" %>
+            <%= f.text_field :city, placeholder: "City", class: "connector" %>
+            <%= f.text_field :state, placeholder: "State", class: "connector" %>
+            <%= f.submit "Filter", class: "btn btn-default connector" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="twee">
+      <h2>Advanced Search <i class="fa fa-search"></i></h2>
         <div class="tabbable">
-          <ul class="nav nav-tabs">
-            <li class="active"><a href="#one" data-toggle="tab" class="basic">Basic Search</a></li>
-            <li><a href="#twee" data-toggle="tab" class="advanced">Advanced Search</a></li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active" id="one">
-              <h2>Basic Search <i class="fa fa-search"></i></h2>
-              <div class="tabbable">
-                <ul class="nav nav-tabs">
-              <div class="form">
-                <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
-                <li><%= f.text_field :artist, placeholder: "Artist", class: "connector" %></li>
-                <li><%= f.text_field :city, placeholder: "City", class: "connector" %></li>
-                <li><%= f.text_field :state, placeholder: "State", class: "connector" %></li>
-                <li><%= f.submit "Filter", class: "btn btn-default connector" %></li>
-          <% end %>
+          <div class="form">
+            <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
+              <%= f.text_field :artist, placeholder: "Artist", class: "connector" %>
+              <%= f.text_field :city, placeholder: "City", class: "connector" %>
+              <%= f.text_field :state, placeholder: "State", class: "connector" %>
+              <%= f.text_field :start_date, placeholder: "End Date", class: "from_date connector", contenteditable: false %>
+              <%= f.text_field :end_date, placeholder: "Start Date", class: "to_date connector", contenteditable: false %>
+              <%= f.select :amenities, hide_label: true, class: "connector", placeholder: "Amenities" %>
+              <%= f.select :camping, hide_label: true, class: "connector", placeholder: "Camping" %>
+              <%= f.submit "Filter", class: "btn btn-default connector" %>
+           <% end %>
+          </div>
         </div>
-        </ul>
-        </div>
-            </div>
-            <div class="tab-pane" id="twee">
-              <h2>Advanced Search <i class="fa fa-search"></i></h2>
-              <div class="tabbable">
-                <ul class="nav nav-tabs">
-              <div class="form">
-                <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
-                <li><%= f.text_field :artist, placeholder: "Artist", class: "connector" %></li>
-                <li><%= f.text_field :city, placeholder: "City", class: "connector" %></li>
-                <li><%= f.text_field :state, placeholder: "State", class: "connector" %></li>
-                <li><%= f.text_field :start_date, placeholder: "End Date", class: "from_date connector", contenteditable: false %></li>
-                <li><%= f.text_field :end_date, placeholder: "Start Date", class: "to_date connector", contenteditable: false %></li>
-                <li><%= f.select :amenities, hide_label: true, class: "connector", placeholder: "Amenities" %></li>
-                <li><%= f.select :camping, hide_label: true, class: "connector", placeholder: "Camping" %></li>
-                <li><%= f.submit "Filter", class: "btn btn-default connector" %></li>
-          <% end %>
-        </div>
-        </ul>
-        </div>
-            </div>
-            <div class="tab-pane" id="twee">
-              <h2>Advanced Search <i class="fa fa-search"></i></h2>
-              <div class="tabbable">
-                <ul class="nav nav-tabs">
-              <div class="form">
-                <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
-                <li><%= f.text_field :artist, placeholder: "Artist", class: "connector" %></li>
-                <li><%= f.text_field :city, placeholder: "City", class: "connector" %></li>
-                <li><%= f.text_field :state, placeholder: "State", class: "connector" %></li>
-                <li><%= f.text_field :start_date, placeholder: "End Date", class: "from_date connector", contenteditable: false %></li>
-                <li><%= f.text_field :end_date, placeholder: "Start Date", class: "to_date connector", contenteditable: false %></li>
-                <li><%= f.select :amenities, hide_label: true, class: "connector", placeholder: "Amenities" %></li>
-                <li><%= f.select :camping, hide_label: true, class: "connector", placeholder: "Camping" %></li>
-                <li><%= f.submit "Filter", class: "btn btn-default connector" %></li>
-          <% end %>
-        </div>
-        </ul>
-        </div>
-            </div>
-           </div>
-        </div>
+      </div>
+    </div>
+  </div>
+
+
 <!--
 <div class="row">
 <div class="col-md-3">

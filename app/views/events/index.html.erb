@@ -1,14 +1,65 @@
+<div class="container search-tabs">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="side-bar">
+        <%= render "shared/side_bar" %>
+      </div>
+    </div>
+    <div class="col-md-offset-4">
+      <div id='map-two' class='map'> </div>
+      <script>
+        L.mapbox.accessToken = 'pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img';
+        var geojson = [
+  {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          <%= @events.first.lng %>,
+          <%= @events.first.lat %>
+        ]
+      },
+      "properties": {}
+    }
+  ]
+}
 
-<div class="side-bar">
-  <%= render "shared/side_bar" %>
+];
+var map =  L.mapbox.map('map-two', 'lydias303.af0ad4a4', {scrollWheelZoom: false}).setView([39.7392, -104.9903], 14);
+var myLayer = L.mapbox.featureLayer().addTo(map);
+myLayer.setGeoJSON(geojson);
+      </script>
+    </div>
+  </div>
 </div>
+</div>
+
 <!-- <div class="mock-map col-md-6 col-md-offset-1">
   <h1>Your Filtered Results <i class="fa fa-thumbs-o-up"></i></h1>
   <iframe width="800" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=Music%20Venue%20Denver&key=AIzaSyCd-SnBa7U9_XpirvZCLYFsR2W38wSMoTo"></iframe>
 </div> -->
 
-<div id='map'><iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/lydias303.lce9okp9/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img'></iframe></div>
+<!-- <div id='map'><iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/lydias303.lce9okp9/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img'></iframe></div> -->
 
+<!-- <div id='maps' class='map'> </div>
+<script>
+L.mapbox.accessToken =' pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img';
+var map = L.mapbox.map('maps', 'lydias303.lce9okp9').setView([38.8929,-77.0252], 14).setView([38.8929,-77.0252], 14);
+</script> -->
+
+
+
+
+
+<!-- <div id='map-two' class='map'> </div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img';
+L.mapbox.map('map-two', 'examples.map-i86l3621').setView([38.8929,-77.0252], 14);
+</script> -->
+<!--
 <script type="text/javascript">
 
     window.onload = function() {
@@ -55,7 +106,7 @@
           // {postalCode: '80127'},
           // {city: 'Steamboat Springs', state: 'CO'},
           // { street: '8500 Pena Blvd', city: 'Denver', state: 'CO' },
-          "<%= @event.location %>"
+          "Denver, CO, 80217"
           ]
         });
 
@@ -90,30 +141,3 @@
       // L.marker([39.749747, -104.999977], {icon: turingIcon}).addTo(map).bindPopup("Turing School of Software and Design<br>1510 Blake Street, Denver, CO 80202");
     }
   </script>
-<!-- <div class="row">
-  <div class="col-md-2 home-search-bar">
-  <form id="search-form" class="form-inline search-bar" role="form" method="post" action="/" target="_blank">
-   <div class="input-group">
-     <input type="text" class="form-control search-form" placeholder="Search By State">
-       <span class="input-group-btn">
-         <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search"></i></button>
-       </span>
-     </div>
-   </form>
- <form id="search-form" class="form-inline search-bar" role="form" method="post" action="/" target="_blank">
-  <div class="input-group">
-    <input type="text" class="form-control search-form" placeholder="Search By Date">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search"></i></button>
-      </span>
-    </div>
-  </form>
-<form id="search-form" class="form-inline search-bar" role="form" method="post" action="/" target="_blank">
- <div class="input-group">
-   <input type="text" class="form-control search-form" placeholder="Search By Artist">
-     <span class="input-group-btn">
-       <button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search"></i></button>
-     </span>
-   </div>
- </form>
-</div> -->
