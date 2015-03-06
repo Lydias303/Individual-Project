@@ -49,6 +49,7 @@ class Seed
   end
 
   def generate_events
+    event_type = ['festival', 'concert']
     100.times do
       event = Event.create!(
         display_name:      Faker::Company.name,
@@ -60,7 +61,8 @@ class Seed
         city:              Faker::Address.city,
         lat:               Faker::Address.latitude,
         lng:               Faker::Address.longitude,
-        location:          Faker::Address.street_address
+        location:          Faker::Address.street_address,
+        event_type:        event_type.sample
       )
       puts "Events #{event.display_name} was created!"
     end
