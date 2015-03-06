@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcome#index'
 
-  #  resources :events, only: [:index]
-   get 'events' => "events#index"
+  resources :events, only: [:index, :show]
+  #  get 'events' => "events#index"
 
    get "/login", to: "sessions#new"
    post "/login", to: "sessions#create"
