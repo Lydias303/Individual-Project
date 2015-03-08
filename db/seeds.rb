@@ -12,6 +12,7 @@ class Seed
     seed.generate_venues
     seed.generate_artists
     seed.generate_events
+    seed.generate_artist_events
   end
 
   def generate_users
@@ -45,6 +46,15 @@ class Seed
         display_name: Faker::Name.name
       )
       puts "Artist #{artist.display_name} was created!"
+    end
+  end
+
+  def generate_artist_events
+    20.times do
+      artist_events = ArtistsEvent.create!(
+      artist_id: rand(0..20),
+      event_id:  rand(0..100)
+      )
     end
   end
 
