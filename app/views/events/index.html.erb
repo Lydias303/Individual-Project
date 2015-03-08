@@ -9,6 +9,8 @@
       <div id='map-two' class='map'> </div>
       <script>
         L.mapbox.accessToken = 'pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img';
+        var map =  L.mapbox.map('map-two', 'lydias303.af0ad4a4', {scrollWheelZoom: false}).setView([38.8833, -77.0167], 14);
+        var myLayer = L.mapbox.featureLayer().addTo(map);
         var geojson = [
         {
         "type": "FeatureCollection",
@@ -22,22 +24,11 @@
                 <%= ev.lat %>
               ]
             },
-            "properties": {
+            "properties": {}
           },
             <% end %>]
           }
         ];
-
-        myLayer.on('layeradd', function(e) {
-  var marker = e.layer,
-  feature = marker.feature;
-  if (feature.properties && feature.properties.popupContent) {
-  marker.bindPopup(feature.properties.popupContent);
-  marker.setIcon(L.icon(feature.properties.icon));
-  }
-});
-var map =  L.mapbox.map('map-two', 'lydias303.af0ad4a4', {scrollWheelZoom: false}).setView([39.7392, -104.9903], 14);
-var myLayer = L.mapbox.featureLayer().addTo(map);
 myLayer.setGeoJSON(geojson);
       </script>
     </div>
