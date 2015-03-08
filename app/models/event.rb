@@ -13,6 +13,7 @@ class Event < ActiveRecord::Base
      where('artists.display_name = ?', artist_name).joins(:artists)
      where(artists: { display_name: artist_name } )
      }
+  scope :date, -> { where("? BETWEEN startDate AND endDate", Date.today)}
   # Create a migration that deletes the artist_id
   # create a join table for artists and events
 end

@@ -72,6 +72,7 @@ class Seed
         lat:               Faker::Address.latitude,
         lng:               Faker::Address.longitude,
         location:          Faker::Address.street_address,
+        state:             Faker::Address.state,
         event_type:        event_type.sample
       )
       puts "Events #{event.display_name} was created!"
