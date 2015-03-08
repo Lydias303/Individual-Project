@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
   scope :event_type,   -> (event_type) { where event_type: event_type }
   scope :location,     -> (location) { where location: location}
   scope :artist, lambda { |artist_name|
-    #  where('artists.display_name = ?', artist_name).joins(:artists)
+     where('artists.display_name = ?', artist_name).joins(:artists)
      where(artists: { display_name: artist_name } )
      }
   # Create a migration that deletes the artist_id
