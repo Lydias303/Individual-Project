@@ -22,11 +22,20 @@
                 <%= ev.lat %>
               ]
             },
-            "properties": {}
+            "properties": {
           },
             <% end %>]
           }
         ];
+
+        myLayer.on('layeradd', function(e) {
+  var marker = e.layer,
+  feature = marker.feature;
+  if (feature.properties && feature.properties.popupContent) {
+  marker.bindPopup(feature.properties.popupContent);
+  marker.setIcon(L.icon(feature.properties.icon));
+  }
+});
 var map =  L.mapbox.map('map-two', 'lydias303.af0ad4a4', {scrollWheelZoom: false}).setView([39.7392, -104.9903], 14);
 var myLayer = L.mapbox.featureLayer().addTo(map);
 myLayer.setGeoJSON(geojson);
@@ -35,108 +44,3 @@ myLayer.setGeoJSON(geojson);
   </div>
 </div>
 </div>
-
-<!-- <div class="mock-map col-md-6 col-md-offset-1">
-  <h1>Your Filtered Results <i class="fa fa-thumbs-o-up"></i></h1>
-  <iframe width="800" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=Music%20Venue%20Denver&key=AIzaSyCd-SnBa7U9_XpirvZCLYFsR2W38wSMoTo"></iframe>
-</div> -->
-
-<!-- <div id='map'><iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/lydias303.lce9okp9/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img'></iframe></div> -->
-
-<!-- <div id='maps' class='map'> </div>
-<script>
-L.mapbox.accessToken =' pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img';
-var map = L.mapbox.map('maps', 'lydias303.lce9okp9').setView([38.8929,-77.0252], 14).setView([38.8929,-77.0252], 14);
-</script> -->
-
-
-
-
-
-<!-- <div id='map-two' class='map'> </div>
-<script>
-L.mapbox.accessToken = 'pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img';
-L.mapbox.map('map-two', 'examples.map-i86l3621').setView([38.8929,-77.0252], 14);
-</script> -->
-<!--
-<script type="text/javascript">
-
-    window.onload = function() {
-      var map,
-      dir;
-
-      map = L.map('map', {
-        layers: MQ.mapLayer(),
-        center: [ 40.045049, -105.961737 ],
-        zoom: 7
-      });
-
-      dir = MQ.routing.directions()
-      .on('success', function(data) {
-        var legs = data.route.legs,
-        html = '',
-        maneuvers,
-        i;
-
-        if (legs && legs.length) {
-          maneuvers = legs[0].maneuvers;
-
-          for (i=0; i<maneuvers.length; i++) {
-            html += (i+1) + '. ';
-            html += maneuvers[i].narrative + '<br />';
-          }
-
-          L.DomUtil.get('route-narrative').innerHTML = html;
-        }
-      });
-      map.locate({setView: false, maxZoom: 16});
-
-      function onLocationFound(e) {
-        // var radius = e.accuracy / 2;
-        // L.marker(e.latlng).addTo(map)
-        // .bindPopup("You are within " + radius + " meters from this point").openPopup();
-        //
-        // L.circle(e.latlng, radius).addTo(map);
-        dir.route({
-          locations: [
-          { latLng: { lat: e.latlng.lat, lng: e.latlng.lng}},
-          // { latLng: { lat: 39.781, lng: -105.078 }},
-          // "Golden, CO",
-          // {postalCode: '80127'},
-          // {city: 'Steamboat Springs', state: 'CO'},
-          // { street: '8500 Pena Blvd', city: 'Denver', state: 'CO' },
-          "Denver, CO, 80217"
-          ]
-        });
-
-        map.addLayer(MQ.routing.routeLayer({
-          directions: dir,
-          fitBounds: true
-        }));
-      }
-
-      map.on('locationfound', onLocationFound);
-
-      function onLocationError(e) {
-        alert(e.message);
-      };
-
-      map.on('locationerror', onLocationError);
-
-      // var scottIcon = L.icon({
-      //   iconUrl: 'https://scontent.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10155510_10204458136868133_2678102298998605784_n.jpg?oh=1b229d0033f64ab07645de7a59ecc41c&oe=5582A623',
-      //
-      //   iconSize:     [64, 64], // size of the icon
-      //   popupAnchor:  [0, -76] // point from which the popup should open relative to the iconAnchor
-      // });
-      // L.marker([39.781, -105.078], {icon: scottIcon}).addTo(map).bindPopup("Still famous in Lightning Talks!");
-      //
-      // var turingIcon = L.icon({
-      //   iconUrl: 'https://pbs.twimg.com/profile_images/444146105312243712/EHdy1GyV_400x400.png',
-      //
-      //   iconSize:     [64, 64], // size of the icon
-      //   popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-      // });
-      // L.marker([39.749747, -104.999977], {icon: turingIcon}).addTo(map).bindPopup("Turing School of Software and Design<br>1510 Blake Street, Denver, CO 80202");
-    }
-  </script>
