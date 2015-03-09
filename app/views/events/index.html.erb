@@ -24,11 +24,40 @@
                 <%= ev.lat %>
               ]
             },
-            "properties": {}
+            "properties": { "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Cherry_Blossoms_and_Washington_Monument.jpg/320px-Cherry_Blossoms_and_Washington_Monument.jpg",
+        "url": "<%= request.env['HTTP_HOST']%>/events/<%= ev.id %>",
+        "marker-symbol": "<%= ev.event_type == "festival" ? "campsite" : "music" %>",
+        "marker-color": "<%= ev.event_type == "festival" ? "#8e357c" : "#bfa24b" %>",
+        "marker-size": "large",
+        "display_name": "<%=  ev.display_name %><br>",
+        "city": "<%=  ev.city %><br>",
+        "state": "<%=  ev.state %><br>",
+        "event_type": "<%= ev.event_type %><br>"}
           },
             <% end %>]
           }
         ];
+
+        // Add custom popups to each using our custom feature properties
+myLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+
+    // Create custom popup content
+    var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
+                            '<img src="' + feature.properties.image + '" />' +
+                            feature.properties.display_name +
+                            feature.properties.city +
+                            feature.properties.state +
+                            feature.properties.event_type +
+                        '</a>';
+
+    // http://leafletjs.com/reference.html#popup
+    marker.bindPopup(popupContent,{
+        closeButton: false,
+        minWidth: 320
+    });
+});
 
 myLayer.setGeoJSON(geojson);
       </script>
