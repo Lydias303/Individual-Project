@@ -299,7 +299,43 @@ h2 {
 }
 
 .advanced {
-  color: rgba(245, 162, 94, 0.88);
+  color: #bfa24b;
+}
+
+
+#map-two {
+  position:absolute;
+  top:0;
+  bottom:0;
+  width: 60%;
+  height:100%;
+  margin: 0;
+  margin-top: 375px;
+  margin-right: 100px;
+  margin-left: 50px;
+  margin-bottom: 200px;
+  padding: 0;
+}
+
+.img-circle {
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    border-radius:50%;
+}
+
+.img-div img{
+    -webkit-transform:translate(-50%);
+    margin-left:100px;
+}
+
+.circle-image{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background-image:url("http://placekitten.com/g/200/400");
+    display:block;
+    background-position-y:25%
 }
 
 // /* =========================
