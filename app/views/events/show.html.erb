@@ -6,7 +6,7 @@
         <%= @event.age_restriction %></br>
         <%= @event.popularity %></br>
         <%= @event.city %></br>
-        <%= @event.artists.first.display_name %></br>
+        <%= @event.artists.map(&:display_name).join(", ") %></br>
       </div>
     </div>
   </div>

@@ -53,7 +53,7 @@ class Seed
     20.times do
       artist_events = ArtistsEvent.create!(
       artist_id: rand(0..20),
-      event_id:  rand(0..100)
+      event_id:  rand(0..10)
       )
     end
   end
@@ -72,6 +72,7 @@ class Seed
         lat:               Faker::Address.latitude,
         lng:               Faker::Address.longitude,
         location:          Faker::Address.street_address,
+        state:             Faker::Address.state,
         event_type:        event_type.sample
       )
       puts "Events #{event.display_name} was created!"

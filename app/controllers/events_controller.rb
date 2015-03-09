@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   private
 
   def filtering_params(params)
-    params.slice(:display_name, :city, :state, :venue, :date, :artists, :age_restiction, :popularity, :event_type)
+    params.slice(:display_name, :city, :state, :venue, :date, :artist, :age_restiction, :popularity, :event_type)
   end
 end
 
