@@ -28,7 +28,7 @@
               <%= f.text_field :venue, placeholder: "Venue", class: "connector" %>
               <%= f.text_field :start_date, placeholder: "End Date", class: "from_date connector", contenteditable: false %>
               <%= f.text_field :end_date, placeholder: "Start Date", class: "to_date connector", contenteditable: false %>
-              <%= f.select     :type, options_for_select(event_type_helper), placeholder: "Event Type", class: "connector" %>
+              <%= f.select     :event_type, options_for_select(event_type_helper), placeholder: "Event Type", class: "connector" %>
               <%= f.submit "Filter", class: "btn btn-default connector" %>
            <% end %>
           </div>
