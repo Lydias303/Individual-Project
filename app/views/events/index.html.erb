@@ -9,7 +9,7 @@
       <div id='map-two' class='map'> </div>
       <script>
         L.mapbox.accessToken = 'pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img';
-        var map =  L.mapbox.map('map-two', 'lydias303.af0ad4a4', {scrollWheelZoom: false}).setView([38.8833, -77.0167], 14);
+        var map =  L.mapbox.map('map-two', 'lydias303.af0ad4a4',{scrollWheelZoom: true}).setView([39.828127, -98.579404], 4);;
         var myLayer = L.mapbox.featureLayer().addTo(map);
         var geojson = [
         {
@@ -29,6 +29,7 @@
             <% end %>]
           }
         ];
+
 myLayer.setGeoJSON(geojson);
       </script>
     </div>

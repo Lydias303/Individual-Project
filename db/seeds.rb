@@ -53,7 +53,7 @@ class Seed
     20.times do
       artist_events = ArtistsEvent.create!(
       artist_id: rand(0..20),
-      event_id:  rand(0..100)
+      event_id:  rand(0..10)
       )
     end
   end
