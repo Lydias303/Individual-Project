@@ -57,3 +57,10 @@ $(".to_date")
 });
 
 $('.dropdown-toggle').dropdown();
+
+$('#openBtn').click(function(){
+    $('#myModal').on('show', function () {
+
+  });
+    $('#myModal').modal({show:true})
+});

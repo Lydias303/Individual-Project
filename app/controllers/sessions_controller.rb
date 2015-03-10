@@ -6,16 +6,20 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path
     else
+      flash[:error] = "Invalid Login"
       redirect_to root_path
     end
   end
 
-  def auth
-    (request.env['omniauth.auth'])
-  end
 
   def destroy
     session[:user_id] = nil
     redirect_to root_path
+  end
+
+  private
+
+  def auth
+    (request.env['omniauth.auth'])
   end
 end
