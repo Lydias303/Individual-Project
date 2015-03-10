@@ -76,6 +76,15 @@ div.navbar-header {
   font-size: 28px;
 }
 
+body > div.navbar.transparent.navbar-static-top > nav > div > a{
+  text-decoration: none;
+
+}
+
+body > div.navbar.transparent.navbar-static-top > nav > div > a:hover {
+
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -147,50 +156,50 @@ a.zocial.facebook {
  padding-right: 70px;
 }
 
-.fourth-well {
-  box-shadow: none;
-  background: transparent;
-  border: none;
-  // margin-top: 200px;
-  margin-right: 5px;
-  margin-bottom: 10px;
-  margin-left: 5px;
-  // padding-bottom: 150px;
-  font-size: 32px;
-  font-weight: bold;
-  padding-right: 60px;
-  padding-left: 20px;
- }
-
-.fifth-well {
- box-shadow: none;
- background: transparent;
- border: none;
- margin-top: 0;
- margin-right: 5px;
- margin-bottom: 10px;
- margin-left: 190px;
- // padding-bottom: 150px;
- font-size: 32px;
- font-weight: bold;
-}
-
-.sixth-well {
- box-shadow: none;
- background: transparent;
- border: transparent;
- margin-top: 0;
- margin-right: 100px;
- margin-bottom: 10px;
- margin-left: 5px;
- // padding-bottom: 150px;
- font-size: 32px;
- font-weight: bold;
- padding-right: 70px;
-}
+// .fourth-well {
+//   box-shadow: none;
+//   background: transparent;
+//   border: none;
+//   // margin-top: 200px;
+//   margin-right: 5px;
+//   margin-bottom: 10px;
+//   margin-left: 5px;
+//   // padding-bottom: 150px;
+//   font-size: 32px;
+//   font-weight: bold;
+//   padding-right: 60px;
+//   padding-left: 20px;
+//  }
+//
+// .fifth-well {
+//  box-shadow: none;
+//  background: transparent;
+//  border: none;
+//  margin-top: 0;
+//  margin-right: 5px;
+//  margin-bottom: 10px;
+//  margin-left: 190px;
+//  // padding-bottom: 150px;
+//  font-size: 32px;
+//  font-weight: bold;
+// }
+//
+// .sixth-well {
+//  box-shadow: none;
+//  background: transparent;
+//  border: transparent;
+//  margin-top: 0;
+//  margin-right: 100px;
+//  margin-bottom: 10px;
+//  margin-left: 5px;
+//  // padding-bottom: 150px;
+//  font-size: 32px;
+//  font-weight: bold;
+//  padding-right: 70px;
+// }
 
 .like-heart :hover {
-  color: #7bd5b8;
+  color: #bfa24b;
 }
 
 .fifth-img {
@@ -264,6 +273,9 @@ a.zocial.facebook {
   color: rgba(245, 162, 94, 0.88);
 }
 
+#networks .info:hover {
+  color: #bfa24b;
+}
 
 // /* =========================
 //
@@ -271,15 +283,10 @@ a.zocial.facebook {
 //
 //    =========================*/
 
-// .search-side-bar {
-//   padding: 20px;
-//   background:rgba(166, 165, 160, 0.7);
-//   margin-top: 30px;
-// }
-
-.mock-map {
-  margin-top: 0;
+.event-index-well {
+  background: rgba(109, 15, 128, 0.2);
 }
+
 
 h2 {
   font-size: 31px;
@@ -310,7 +317,7 @@ h2 {
   width: 60%;
   height:100%;
   margin: 0;
-  margin-top: 375px;
+  margin-top: 255px;
   margin-right: 100px;
   margin-left: 50px;
   margin-bottom: 200px;
@@ -318,22 +325,10 @@ h2 {
 }
 
 .img-circle {
-    height:200px;
-    width:200px;
+    height:180px;
+    width:180px;
     overflow:hidden;
     border-radius:50%;
-}
 
-.img-div img{
-    -webkit-transform:translate(-50%);
-    margin-left:100px;
-}
-
-.circle-image{
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    background-image:url("http://placekitten.com/g/200/400");
-    display:block;
-    background-position-y:25%
+color: #fff;
 }
