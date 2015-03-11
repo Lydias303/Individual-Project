@@ -50,114 +50,6 @@
 
 }
 
-html {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-image: url('images/starfield.jpg');
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: #4daeb9;
-  color: #000;
-  text-align: center;
-  height: 45px;
-  margin-top: -16px;
-  padding-top: 10px;
-}
-
-header ul {
-  list-style: none;
-}
-
-header li {
-  text-transform: uppercase;
-  font-weight: bold;
-  display: inline;
-  padding: 50px;
-}
-
-.top {
-  width: 80%;
-  height: 60px;
-  margin: 20px auto 0 auto;
-  background-image: url("images/flagpole-top.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-}
-
-.banner {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.main {
-  width: 80%;
-  margin: -22px auto 0 auto;
-  text-align: center;
-  background-image: url("images/flagpole-mid.png");
-  background-repeat: repeat-y;
-  background-position: top left;
-}
-
-.bottom {
-  width: 79%;
-  margin: -17px auto;
-}
-
-.bottom .left {
-  float: left;
-  width: 200px;
-  height: 200px;
-  background-image: url("images/sasquatch.png");
-  background-repeat: no-repeat;
-  background-position: bottom left;
-}
-
-.bottom .right {
-  float: right;
-  width: 200px;
-  height: 200px;
-  background-image: url("images/ship.png");
-  background-repeat: no-repeat;
-  background-position: bottom right;
-}
-
-footer {
-  height: 59px;
-  background: #4daeb9;
-  border-bottom: 20px solid #f16729;
-}
-
-.footer-elements {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.element1 {
-  float: left;
-  width: 33%;
-  margin: 0px auto;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.element2 {
-  float: left;
-  width: 33%;
-  margin: 0px auto;
-  padding: 20px 0;
-  text-align: center;
-  background: #2e8a94;
-}
-
-
 // body {
 //   font-family: 'ostrich';
 //   font-size: 22px;
@@ -194,7 +86,7 @@ body > div.navbar.transparent.navbar-static-top > nav > div > a:hover {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -356,10 +248,10 @@ a.zocial.facebook {
 //    =========================*/
 
 #networks {
-  width: 100%;
-  height: 100%;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  // width: 100%;
+  // height: 100%;
+  // margin-top: 50px;
+  // margin-bottom: 0;
   text-align: center;
 }
 
@@ -439,4 +331,165 @@ h2 {
     border-radius:50%;
 
 color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: image-url('gradient.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: 0px -100px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #4daeb9;
+  color: #000;
+  text-align: center;
+  height: 45px;
+  margin-top: -16px;
+  padding-top: 10px;
+}
+
+header ul {
+  list-style: none;
+}
+
+header li {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline;
+  padding: 50px;
+}
+
+.top {
+  width: 80%;
+  height: 60px;
+  margin: 20px auto 0 auto;
+  background-image: url("flagpole-top.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.banner {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main {
+  width: 80%;
+  margin: -22px auto 0 auto;
+  text-align: center;
+  background-image: url("flagpole-mid.png");
+  background-repeat: repeat-y;
+  background-position: top left;
+}
+
+.bottom {
+  width: 79%;
+  margin: -17px auto;
+}
+
+.bottom .left {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-image: url("sasquatch.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.bottom .right {
+  float: right;
+  width: 200px;
+  height: 200px;
+  background-image: url("ship.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+footer {
+  height: 59px;
+  background: #4daeb9;
+  border-bottom: 20px solid #f16729;
+}
+
+.footer-elements {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.element1 {
+  float: left;
+  width: 33%;
+  margin: 0px auto;
+  padding: 20px 0;
+  text-align: center;
+  text-size: 50px;
+}
+
+.element2 {
+  float: left;
+  width: 33%;
+  margin: 0px auto;
+  padding: 20px 0;
+  text-align: center;
+  background: #2e8a94;
+  border-radius: 2px;
+}
+
+.footer-img {
+  width:100%;
+  margin-bottom: 0;
+}
+
+
+.social-element i {
+  font-size: 34px;
+  color: white;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.social-element .facebook:hover {
+  color: #7bd5b8;
+}
+
+.social-element .twitter:hover {
+  color:  #e2f29e;
+}
+
+.social-element.mail:hover {
+  color: rgba(245, 162, 94, 0.88);
+}
+
+.social-element .info:hover {
+  color: #bfa24b;
+}
+
+.search-button {
+  margin-top: 40px;
 }
