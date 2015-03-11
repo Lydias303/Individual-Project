@@ -16,6 +16,9 @@ class Event < ActiveRecord::Base
   scope :artist, lambda { |artist_name|
     joins(:artists_events => :artist).where('artists.display_name' => artist_name)
   }
+  scope :date_range, -> (start_date, end_date){where datetime: start_date..end_date }
+
+  # Event.date_range(params[:start_date], params[:end_date])
 
   # Create a migration that deletes the artist_id
   # create a join table for artists and events

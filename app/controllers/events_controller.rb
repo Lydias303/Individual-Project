@@ -9,6 +9,7 @@ class EventsController < ApplicationController
     filtering_params(params).each do |key, value|
       @events = @events.public_send(key, value) if value.present?
     end
+      @events = @events.date_range(params[:start_date], params[:end_date]) if (params[:start_date] && params[:end_date])
   end
 
   def show
@@ -18,7 +19,7 @@ class EventsController < ApplicationController
   private
 
   def filtering_params(params)
-    params.slice(:display_name, :city, :state, :venue, :date, :artist, :age_restiction, :popularity, :event_type)
+    params.slice(:display_name, :city, :state, :venue, :artist, :age_restiction, :popularity, :event_type)
   end
 end
 
