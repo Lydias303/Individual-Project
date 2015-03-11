@@ -2,15 +2,15 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.where(nil)
-    # artist = Artist.includes(:events).find_by(display_name: params[:display_name])
-    # if artist
-    #   @events << artist.events
-    # end
     filtering_params(params).each do |key, value|
       @events = @events.public_send(key, value) if value.present?
     end
-      @events = @events.date_range(params[:start_date], params[:end_date]) if (params[:start_date] && params[:end_date])
-  end
+       if (params[:start_date] && params[:end_date])
+        #  start_date = Date.parse(params[:start_date])
+        #  end_date   = Date.parse(params[:end_date])
+         @events = @events.date_range(params[:start_date], params[:end_date])
+      end
+    end
 
   def show
     @event = Event.find_by(id: params[:id])

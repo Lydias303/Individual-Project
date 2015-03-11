@@ -50,16 +50,124 @@
 
 }
 
-body {
-  font-family: 'ostrich';
-  font-size: 22px;
-  font-weight: bold;
-  background: linear-gradient(rgba(240, 240, 230, 0.7), rgba(240, 240, 230, 0.7)), image-url('crowd.jpg') center center fixed no-repeat;
+html {
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  font-weight: bold;
+body {
+  background-image: url('images/starfield.jpg');
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
+
+header {
+  background: #4daeb9;
+  color: #000;
+  text-align: center;
+  height: 45px;
+  margin-top: -16px;
+  padding-top: 10px;
+}
+
+header ul {
+  list-style: none;
+}
+
+header li {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline;
+  padding: 50px;
+}
+
+.top {
+  width: 80%;
+  height: 60px;
+  margin: 20px auto 0 auto;
+  background-image: url("images/flagpole-top.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.banner {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main {
+  width: 80%;
+  margin: -22px auto 0 auto;
+  text-align: center;
+  background-image: url("images/flagpole-mid.png");
+  background-repeat: repeat-y;
+  background-position: top left;
+}
+
+.bottom {
+  width: 79%;
+  margin: -17px auto;
+}
+
+.bottom .left {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-image: url("images/sasquatch.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.bottom .right {
+  float: right;
+  width: 200px;
+  height: 200px;
+  background-image: url("images/ship.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+footer {
+  height: 59px;
+  background: #4daeb9;
+  border-bottom: 20px solid #f16729;
+}
+
+.footer-elements {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.element1 {
+  float: left;
+  width: 33%;
+  margin: 0px auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.element2 {
+  float: left;
+  width: 33%;
+  margin: 0px auto;
+  padding: 20px 0;
+  text-align: center;
+  background: #2e8a94;
+}
+
+
+// body {
+//   font-family: 'ostrich';
+//   font-size: 22px;
+//   font-weight: bold;
+//   background: linear-gradient(rgba(240, 240, 230, 0.7), rgba(240, 240, 230, 0.7)), image-url('crowd.jpg') center center fixed no-repeat;
+// }
+
+// h1 {
+//   font-weight: bold;
+// }
 // /* =========================
 //
 //      nav bar
