@@ -1,7 +1,9 @@
 class Event < ActiveRecord::Base
-
   has_many :artists_events
   has_many :artists, through: :artists_events
+
+  has_many :events_users
+  has_many :users, through: :events_users
 
   belongs_to :venue
 
@@ -15,8 +17,4 @@ class Event < ActiveRecord::Base
   }
   scope :date_range, -> (start_date, end_date){where datetime: start_date..end_date }
 
-  # Event.date_range(params[:start_date], params[:end_date])
-
-  # Create a migration that deletes the artist_id
-  # create a join table for artists and events
 end

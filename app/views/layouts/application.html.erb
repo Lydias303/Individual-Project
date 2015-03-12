@@ -16,6 +16,10 @@
   </style>
 </head>
 <body>
+<% if current_page? root_path %>
+<div class="home-page-background">
+  <% end %>
+
 
   <%= render "shared/nav_bar" %>
 
@@ -24,6 +28,13 @@
   <% end %>
 
 <%= yield %>
-
+<div class="row">
+  <div class="col-md-12">
+<img class="footer-img" src="http://aclp3.c3cdn.com/wp/wp-content/themes/acl2013/img/desk-footer__bg.png" alt="" data-class="footer-stack--truck-trailer">
+</div>
+</div>
+<% if current_page? root_path %>
+</div>
+<% end %>
 </body>
 </html>

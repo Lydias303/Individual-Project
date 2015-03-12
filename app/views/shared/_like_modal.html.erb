@@ -1,0 +1,18 @@
+<div class="modal fade" id="likes-modal" tabindex="-1" role="dialog" aria-labelledby="likesModalLabel" aria-hidden="true">
+  <div class="modal-dialog likes-modal">
+    <div class="modal-content likes-modal">
+      <div class="modal-header">
+        <p>Your Favorite Festivals</p>
+      </div>
+      <div class="modal-body">
+      <% if current_user.nil? %>
+      <h2> Want to store your favorite Festivals?</h2>
+      <li><a href="/auth/facebook">Login with <i class="fa fa-facebook-square"></i></a></li>
+      <% else %>
+
+
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

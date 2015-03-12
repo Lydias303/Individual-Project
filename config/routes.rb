@@ -7,6 +7,8 @@ Rails.application.routes.draw do
    root 'welcome#index'
 
   resources :events, only: [:index, :show]
+
+  post "/event_likes", to: 'events_users#create'
   #  get 'events' => "events#index"
 
    get "/login", to: "sessions#new"
@@ -14,6 +16,8 @@ Rails.application.routes.draw do
    delete "/logout", to: "sessions#destroy"
 
    get 'auth/:provider/callback', to: 'sessions#create'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

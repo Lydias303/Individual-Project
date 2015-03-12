@@ -58,9 +58,13 @@ $(".to_date")
 
 $('.dropdown-toggle').dropdown();
 
-$('#openBtn').click(function(){
-    $('#myModal').on('show', function () {
+// $('#openBtn').click(function(){
+//     $('#myModal').on('show', function () {
+//
+//   });
+//     $('#myModal').modal({show:true})
+// });
 
-  });
-    $('#myModal').modal({show:true})
+$('#openBtn').click(function(){
+  $('#likes-modal').modal({show:true})
 });

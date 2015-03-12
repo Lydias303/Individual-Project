@@ -50,16 +50,9 @@
 
 }
 
-// body {
-//   font-family: 'ostrich';
-//   font-size: 22px;
-//   font-weight: bold;
-//   background: linear-gradient(rgba(240, 240, 230, 0.7), rgba(240, 240, 230, 0.7)), image-url('crowd.jpg') center center fixed no-repeat;
-// }
-
-// h1 {
-//   font-weight: bold;
-// }
+h1 {
+  font-weight: bold;
+}
 // /* =========================
 //
 //      nav bar
@@ -111,10 +104,6 @@ a.zocial.facebook {
   text-align: center;
 }
 
-// .featured {
-//   background: rgba(0, 0, 0, 0.53);
-// }
-
 .first-well {
   box-shadow: none;
   background: transparent;
@@ -156,48 +145,6 @@ a.zocial.facebook {
  padding-right: 70px;
 }
 
-// .fourth-well {
-//   box-shadow: none;
-//   background: transparent;
-//   border: none;
-//   // margin-top: 200px;
-//   margin-right: 5px;
-//   margin-bottom: 10px;
-//   margin-left: 5px;
-//   // padding-bottom: 150px;
-//   font-size: 32px;
-//   font-weight: bold;
-//   padding-right: 60px;
-//   padding-left: 20px;
-//  }
-//
-// .fifth-well {
-//  box-shadow: none;
-//  background: transparent;
-//  border: none;
-//  margin-top: 0;
-//  margin-right: 5px;
-//  margin-bottom: 10px;
-//  margin-left: 190px;
-//  // padding-bottom: 150px;
-//  font-size: 32px;
-//  font-weight: bold;
-// }
-//
-// .sixth-well {
-//  box-shadow: none;
-//  background: transparent;
-//  border: transparent;
-//  margin-top: 0;
-//  margin-right: 100px;
-//  margin-bottom: 10px;
-//  margin-left: 5px;
-//  // padding-bottom: 150px;
-//  font-size: 32px;
-//  font-weight: bold;
-//  padding-right: 70px;
-// }
-
 .like-heart :hover {
   color: #bfa24b;
 }
@@ -210,9 +157,6 @@ a.zocial.facebook {
   text-align: center;
 }
 
-.featured-logo {
-  margin-left: 750px;
-}
 // /* =========================
 //
 //      home page search bar
@@ -333,32 +277,22 @@ h2 {
 color: #fff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 html {
   margin: 0;
   padding: 0;
 }
 
+body div.home-page-background {
+    background: image-url('gradient.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: 0px -100px;
+}
+
 body {
   background: image-url('gradient.jpg') no-repeat center center;
   background-size: cover;
-  background-position: 0px -100px;
+  background-position: 0px -550px;
+  font-family: 'ostrich';
   color: #fff;
   margin: 0;
   padding: 0;
@@ -464,6 +398,7 @@ footer {
 .footer-img {
   width:100%;
   margin-bottom: 0;
+  margin-top: 100px;
 }
 
 
@@ -492,4 +427,32 @@ footer {
 
 .search-button {
   margin-top: 40px;
+}
+
+// /* =========================
+//
+//      likes modal
+//
+//    =========================*/
+
+#likes-modal {
+  background: #df8524;
+}
+
+.likes-modal {
+  background: #45123f;
+}
+
+
+
+// /* =========================
+//
+//      event show
+//
+//    =========================*/
+
+.event-show {
+  background: #d55e0f;
+  font-size: 30px;
+  font-weight: bold;
 }
