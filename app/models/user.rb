@@ -1,10 +1,6 @@
 class User < ActiveRecord::Base
   has_many :events_users
-  has_many :events, through: :user_events
-  # 
-  # scope :events, lambda { |liked_events|
-  #   joins(:events_users => :user).where('user.event_id' => liked_events)
-  # }
+  has_many :events, through: :events_users
 
   def self.find_or_create_from_auth(auth)
     user = User.find_or_create_by(provider: auth.provider, uid: auth.uid)
@@ -15,7 +11,8 @@ class User < ActiveRecord::Base
     user
   end
 
-  # def show
-  #   @user = User.find(params[:id])
-  # end
+  def user_event_like
+    # User.joins(:events_users).where(["event_id = ? ", event_id])
+    # Events_users.find(["event_id = ?", event_id])
+  end
 end

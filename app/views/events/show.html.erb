@@ -7,7 +7,11 @@
         <%= @event.popularity %></br>
         <%= @event.city %></br>
         <%= @event.artists.map(&:display_name).join(", ") %></br>
+        <% if current_user.events.include?(@event) %>
+        <h3> Liked </h3>
+        <% else %>
         <%= render partial: 'shared/like_button', locals: {event: @event} %>
+        <% end %>
       </div>
     </div>
   </div>

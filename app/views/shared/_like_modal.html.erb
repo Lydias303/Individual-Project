@@ -8,9 +8,13 @@
       <% if current_user.nil? %>
       <h2> Want to store your favorite Festivals?</h2>
       <li><a href="/auth/facebook">Login with <i class="fa fa-facebook-square"></i></a></li>
+      <% elsif likes.nil? %>
+      <h3> It looks like you haven't liked any festivals yet.<br>
+      Go Check Some Out! <%= link_to "Browse Festivals", events_path %></h3>
       <% else %>
-
-
+        <% likes.each do |like| %>
+          <%= like %><br>
+        <% end %>
       <% end %>
       </div>
     </div>

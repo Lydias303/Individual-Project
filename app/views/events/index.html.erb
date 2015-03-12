@@ -10,7 +10,7 @@
       <div id='map-two' class='map'> </div>
       <script>
         L.mapbox.accessToken = 'pk.eyJ1IjoibHlkaWFzMzAzIiwiYSI6ImM0WG9rY28ifQ.bM1Nx1fsDmbAFLVP1f9Img';
-        var map =  L.mapbox.map('map-two', 'lydias303.af0ad4a4',{scrollWheelZoom: true}).setView([39.828127, -98.579404], 4);;
+        var map =  L.mapbox.map('map-two', 'lydias303.4498de5f',{scrollWheelZoom: true}).setView([39.828127, -98.579404], 4);;
         var myLayer = L.mapbox.featureLayer().addTo(map);
         var geojson = [
         {
@@ -25,7 +25,7 @@
                 <%= ev.lat %>
               ]
             },
-            "properties": { "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Cherry_Blossoms_and_Washington_Monument.jpg/320px-Cherry_Blossoms_and_Washington_Monument.jpg",
+            "properties": { "image": "http://i.dailymail.co.uk/i/pix/2013/07/31/article-2381883-1B13BBC0000005DC-568_64x54.jpg",
         "url": "<%= request.env['HTTP_HOST']%>/events/<%= ev.id %>",
         "marker-symbol": "<%= ev.event_type == "festival" ? "campsite" : "music" %>",
         "marker-color": "<%= ev.event_type == "festival" ? "#8e357c" : "#bfa24b" %>",
