@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+gem 'dotenv-rails', group: [:development, :test]
 gem 'pg'
 
 gem 'rails_12factor', group: :production
@@ -26,6 +27,13 @@ gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem 'figaro'
 gem 'faker'
+
+gem 'rest_client'
+
+gem 'songkickr'
+#
+# gem 'dotenv-deployment', group: :production
+
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
