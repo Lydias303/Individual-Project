@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
-  def index(artist)
-    @results = Events.all(artist)
+  def index
+    @events = Events.all
   end
 end
 

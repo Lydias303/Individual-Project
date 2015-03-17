@@ -3,16 +3,16 @@ require 'json'
 
 class EventServices
 
-  def self.get_artist_calendar(artist)
-    key = ENV["SONGKICK_KEY"]
-    songkick_artist = "http://api.songkick.com/api/3.0/search/artists.json"
-    results = RestClient.get songkick_artist, {:params => {"query" => artist, "apikey" => key} }
-    results = JSON.parse(results)
-    artist_id = results["resultsPage"]["results"]["artist"].first["id"]
-    songkick_artist_calendar = "http://api.songkick.com/api/3.0/artists/#{artist_id}/calendar.json"
-    artist_calendar = RestClient.get songkick_artist_calendar, {:params => {"apikey" => key}}
-    artist_calendar
-  end
+  # def self.get_artist_calendar(artist)
+  #   key = ENV["SONGKICK_KEY"]
+  #   songkick_artist = "http://api.songkick.com/api/3.0/search/artists.json"
+  #   results = RestClient.get songkick_artist, {:params => {"query" => artist, "apikey" => key} }
+  #   results = JSON.parse(results)
+  #   artist_id = results["resultsPage"]["results"]["artist"].first["id"]
+  #   songkick_artist_calendar = "http://api.songkick.com/api/3.0/artists/#{artist_id}/calendar.json"
+  #   artist_calendar = RestClient.get songkick_artist_calendar, {:params => {"apikey" => key}}
+  #   artist_calendar
+  # end
 
   def self.events( options = {})
     songkick_events = "http://api.songkick.com/api/3.0/events.json"
