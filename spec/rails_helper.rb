@@ -3,6 +3,13 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
+require 'vcr'
+require 'webmock/rspec'
+
+VCR.configure do |c|
+  c.cassette_library_dir = "spec/cassettes"
+  c.hook_into               :webmock
+end
 
 OmniAuth.config.test_mode = true
 # Add additional requires below this line. Rails is not loaded until this point!
