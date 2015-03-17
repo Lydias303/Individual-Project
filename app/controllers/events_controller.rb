@@ -1,10 +1,16 @@
 class EventsController < ApplicationController
 
-  def index
-    
+  def index(artist)
+    @results = Events.all(artist)
   end
 end
 
+# require 'faraday'
+# key = "RknuC79GGhjfBGWp"
+# conn = Faraday.new
+# artist  = "weezer"
+# response = conn.get "http://api.songkick.com/api/3.0/search/artists.json?query=#{artist}&apikey=#{key}"
+# puts response.body
 
 
 
@@ -17,28 +23,5 @@ end
 
 
 
-
-
-
-#   def index
-#     @events = Event.where(nil)
-#     filtering_params(params).each do |key, value|
-#       @events = @events.public_send(key, value) if value.present?
-#     end
-#        if (params[:start_date] && params[:end_date])
-#          @events = @events.date_range(params[:start_date], params[:end_date])
-#       end
-#     end
-#
-#   def show
-#     @event = Event.find_by(id: params[:id])
-#   end
-#
-#   private
-#
-#   def filtering_params(params)
-#     params.slice(:display_name, :city, :state, :venue, :artist, :age_restiction, :popularity, :event_type)
-#   end
-# end
 
 # params.delete_if {|k,v| v.nil?}

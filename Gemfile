@@ -68,6 +68,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+  gem 'awesome_print', require:"ap"
 end
 
 group :test do
