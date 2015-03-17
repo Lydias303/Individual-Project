@@ -17,4 +17,11 @@ class Event < ActiveRecord::Base
   }
   scope :date_range, -> (start_date, end_date){where datetime: start_date..end_date }
 
+  # def self.service
+  #   @service ||= EventServices.new
+  # end
+
+  def self.event_search(options = {})
+    EventServices.events(options)
+  end
 end

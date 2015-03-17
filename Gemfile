@@ -28,7 +28,7 @@ gem 'omniauth-facebook', '1.4.0'
 gem 'figaro'
 gem 'faker'
 
-gem 'rest_client'
+gem 'rest-client'
 
 gem 'songkickr'
 #
