@@ -9,7 +9,7 @@
       <div class="tabbable">
         <div class="form">
           <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
-            <%= f.text_field :artist, placeholder: "Artist", class: "connector" %>
+            <%= f.text_field :artist_name, placeholder: "Artist", class: "connector" %>
             <%#= f.text_field :city, placeholder: "City", class: "connector" %>
             <%#= f.text_field :state, placeholder: "State", class: "connector" %>
             <%= f.submit "Filter", class: "btn btn-default connector" %>
@@ -22,7 +22,7 @@
         <div class="tabbable">
           <div class="form">
             <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
-              <%= f.text_field :artist, placeholder: "Artist", class: "connector" %>
+              <%= f.text_field :artist_name, placeholder: "Artist", class: "connector" %>
               <%#= f.text_field :city, placeholder: "City", class: "connector" %>
               <%#= f.text_field :state, placeholder: "State", class: "connector" %>
               <%#= f.text_field :venue, placeholder: "Venue", class: "connector" %>
