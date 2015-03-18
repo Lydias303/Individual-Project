@@ -2,15 +2,15 @@ class EventsController < ApplicationController
 
   def index
 
-    art = params[:artist_name]
+    search_response = params[:artist_name]
     if params[:artist_name].nil?
       @events = Event.all
     else
-      events = EventServices.events(artist_name: art)
+      events = EventServices.events(filtering_params(params))
       parsed = JSON.parse(events)
       parsed_events = parsed["resultsPage"]["results"]["event"]
       parsed_events.each do |event|
-        created_event = Event.create(
+        created_event = Event.find_or_create_by(
           display_name: event["displayName"],
           event_type:   event["type"],
           lat:          event["venue"]["lat"],
@@ -18,7 +18,7 @@ class EventsController < ApplicationController
           datetime:     event["start"]["date"]
         )
 
-        created_event.venue = Venue.create(
+        created_event.venue = Venue.find_or_create_by(
           display_name: event["venue"]["displayName"],
           lat:          event["venue"]["lat"],
           lng:          event["venue"]["lng"],
@@ -27,7 +27,7 @@ class EventsController < ApplicationController
         )
 
         event["performance"].each do |artist|
-          artist = Artist.create(
+          artist = Artist.find_or_create_by(
             display_name: artist["displayName"]
           )
 
@@ -35,9 +35,18 @@ class EventsController < ApplicationController
         end
       end
 
-      @events = Event.artist(params[:artist_name].downcase)
-      require 'pry' ; binding.pry
+      @events = Event.all
+
+      filtering_params(params).each do |key, value|
+        @events = @events.public_send(key, value) if value.present?
+      end
     end
+  end
+
+  private
+
+  def filtering_params(params)
+    params.slice(:artist_name, :location).delete_if {|k,v| v.blank?}
   end
 end
 
@@ -57,11 +66,6 @@ end
 #   @event = Event.find_by(id: params[:id])
 # end
 #
-# private
-#
-# def filtering_params(params)
-#   params.slice(:display_name, :city, :state, :venue, :date, :artists, :event_type)
-# end
 #end
 
 

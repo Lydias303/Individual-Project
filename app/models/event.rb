@@ -12,7 +12,7 @@ class Event < ActiveRecord::Base
   scope :display_name, -> (display_name) { where("display_name ILIKE ?", display_name) }
   scope :event_type,   -> (event_type) { where("event_type ILIKE ?",  event_type) }
   scope :location,     -> (location) { where("location ILIKE ?", location) }
-  scope :artist, lambda { |artist_name|
+  scope :artist_name, lambda { |artist_name|
     joins(:artists_events => :artist).where('artists.display_name' => artist_name)
   }
   scope :date_range, -> (start_date, end_date){where datetime: start_date..end_date }

@@ -27,6 +27,7 @@ gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem 'figaro'
 gem 'faker'
+gem 'geocoder'
 
 gem 'rest-client'
 

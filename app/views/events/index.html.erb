@@ -25,7 +25,7 @@
                 <%= ev.lat %>
               ]
             },
-            "properties": { "image": "http://i.dailymail.co.uk/i/pix/2013/07/31/article-2381883-1B13BBC0000005DC-568_64x54.jpg",
+            "properties": { 
         "url": "<%= request.env['HTTP_HOST']%>/events/<%= ev.id %>",
         "marker-symbol": "<%= ev.event_type == "festival" ? "campsite" : "music" %>",
         "marker-color": "<%= ev.event_type == "festival" ? "#8e357c" : "#bfa24b" %>",
