@@ -17,6 +17,7 @@
 //= require bootstrap-modal
 //= require bootstrap-modalmanager
 //= require moment
+//= require maskedinput
 //= require bootstrap-datetimepicker
 //= require_tree .
 

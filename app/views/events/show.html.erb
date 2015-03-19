@@ -2,12 +2,14 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="well event-show">
+
         <%= @event.datetime  %></br>
         <%= @event.age_restriction %></br>
         <%= @event.popularity %></br>
         <%= @event.city %></br>
         <%= @event.artists.map(&:display_name).join(", ") %></br>
-        <% if current_user.events.include?(@event) %>
+
+        <% if !current_user.nil? && current_user.events.include?(@event) %>
         <h3> Liked </h3>
         <% else %>
         <%= render partial: 'shared/like_button', locals: {event: @event} %>
