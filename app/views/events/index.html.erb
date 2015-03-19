@@ -25,14 +25,13 @@
                 <%= ev.lat %>
               ]
             },
-            "properties": { 
+            "properties": {
         "url": "<%= request.env['HTTP_HOST']%>/events/<%= ev.id %>",
         "marker-symbol": "<%= ev.event_type == "festival" ? "campsite" : "music" %>",
         "marker-color": "<%= ev.event_type == "festival" ? "#8e357c" : "#bfa24b" %>",
         "marker-size": "large",
         "display_name": "<%=  ev.display_name %><br>",
-        "city": "<%=  ev.city %><br>",
-        "state": "<%=  ev.state %><br>",
+        "location": "<%=  ev.location %><br>",
         "event_type": "<%= ev.event_type %><br>"}
           },
             <% end %>]
@@ -45,7 +44,7 @@ myLayer.on('layeradd', function(e) {
         feature = marker.feature;
 
     // Create custom popup content
-    var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
+    var popupContent =  '<a class="popup" href="http://' + feature.properties.url + '">' +
                             '<img src="http://i.dailymail.co.uk/i/pix/2013/07/31/article-2381883-1B13BBC0000005DC-568_634x834.jpg' + feature.properties.image + '" />' +
                             feature.properties.display_name +
                             feature.properties.city +

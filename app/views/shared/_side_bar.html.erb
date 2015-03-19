@@ -10,7 +10,8 @@
         <div class="form">
           <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
             <%= f.text_field :artist_name, placeholder: "Artist", class: "connector" %>
-            <%= f.text_field :location, placeholder: "ip:119.23.23.23", class: "connector" %>
+            <%= f.text_field :location, placeholder: "Location", class: "connector" %>
+            <%#= f.text_field :location, placeholder: "ip:119.23.23.23", class: "connector" %>
             <%#= f.text_field :state, placeholder: "State", class: "connector" %>
             <%= f.submit "Filter", class: "btn btn-default connector" %>
           <% end %>
@@ -21,8 +22,8 @@
       <h2>Advanced Search <i class="fa fa-search"></i></h2>
         <div class="tabbable">
           <div class="form">
-            <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
-              <%= f.text_field :artist_name, placeholder: "Artist", class: "connector" %>
+            <%= bootstrap_form_tag url: "/locations", method: "get" do |f| %>
+              <%= f.text_field :locations, placeholder: "Location", class: "connector" %>
               <%#= f.text_field :city, placeholder: "City", class: "connector" %>
               <%#= f.text_field :state, placeholder: "State", class: "connector" %>
               <%#= f.text_field :venue, placeholder: "Venue", class: "connector" %>
