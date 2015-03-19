@@ -286,7 +286,8 @@ html {
 body div.home-page-background {
     background: image-url('stars-background.jpg') no-repeat center center;
     background-size: cover;
-    background-position: 0px -100px;
+    background-position: 0px;
+
 }
 
 body {
@@ -297,6 +298,8 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 header {
@@ -323,7 +326,7 @@ header li {
   width: 80%;
   height: 80px;
   margin: 20px auto 0 auto;
-  background-image: url("flagpole-top.png");
+  background: image-url("flagpole-top.png");
   background-repeat: no-repeat;
   background-position: top left;
 }
@@ -338,14 +341,14 @@ header li {
   width: 80%;
   margin: -22px auto 0 auto;
   text-align: center;
-  background-image: url("flagpole-mid.png");
+  background: image-url("flagpole-mid.png");
   background-repeat: repeat-y;
   background-position: top left;
-  height: 160px;
+  height: 200px;
 }
 
 .bottom {
-  width: 79%;
+  width: 78.9%;
   margin: -17px auto;
 }
 
@@ -353,7 +356,7 @@ header li {
   float: left;
   width: 200px;
   height: 200px;
-  background-image: url("sasquatch.png");
+  background: image-url("sasquatch.png");
   background-repeat: no-repeat;
   background-position: bottom left;
 }
@@ -362,7 +365,7 @@ header li {
   float: right;
   width: 200px;
   height: 200px;
-  background-image: url("ship.png");
+  background: image-url("ship.png");
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -384,7 +387,6 @@ footer {
   margin: 0px auto;
   padding: 20px 0;
   text-align: center;
-  text-size: 50px;
 }
 
 .element2 {
@@ -411,28 +413,29 @@ footer {
   margin-right: 8px;
 }
 
-.social-element .facebook:hover {
-  color: #7bd5b8;
+.footer-elements .facebook:hover {
+  color: #a5b217;
 }
 
-.social-element .twitter:hover {
-  color:  #e2f29e;
+.footer-elements .twitter:hover {
+  color:  #f4f6e7;
 }
 
-.social-element.mail:hover {
-  color: rgba(245, 162, 94, 0.88);
+.footer-elements .mail:hover {
+  color: rgba(83, 10, 73, 0.89);
 }
 
-.social-element .info:hover {
-  color: #bfa24b;
+.footer-elements .info:hover {
+  color: #db6d12;
 }
+
 
 .search-button{
   margin-top: 22px;
 }
 
 .show-search {
-  margin-top: 22px;
+  padding-top: 90px
 }
 
 // /* =========================
