@@ -1,6 +1,7 @@
 Geocoder.configure(
 
-:lookup => :bing, :api_key => "Al-ruqwG-2ZvGkKS7gjDDBj7HPUg-mts3ZBkmzJDYEzJXeDT8vjrHC5QFeSXYZq9",
+:lookup => :bing,
+:api_key => "Al-ruqwG-2ZvGkKS7gjDDBj7HPUg-mts3ZBkmzJDYEzJXeDT8vjrHC5QFeSXYZq9",
 
   # :use_https=> true,
 
