@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   reverse_geocoded_by :lat, :lng
   after_validation :reverse_geocode
-  before_save :style_event_display
+  # before_save :style_event_display
 
   has_many :artists_events
   has_many :artists, through: :artists_events
@@ -69,13 +69,13 @@ class Event < ActiveRecord::Base
     return true
   end
 
-  def style_event_display
-
-    artist, venue = display_name.split(" at ")
-    venue, date = venue.split("(")
-    date = date[0..-2]
-    save
-  end
+  # def style_event_display
+  #
+  #   artist, venue = display_name.split(" at ")
+  #   venue, date = venue.split("(")
+  #   date = date[0..-2]
+  #   save
+  # end
 end
 # results = Geocoder.coordinates(filtered[:location])
 #

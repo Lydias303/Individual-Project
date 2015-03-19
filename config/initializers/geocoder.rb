@@ -4,7 +4,7 @@ Geocoder.configure(
 
   # :use_https=> true,
 
-  :timeout=> 1
+  :timeout=> 20
   )
 
 
