@@ -10,9 +10,8 @@
         <div class="form">
           <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
             <%= f.text_field :artist_name, placeholder: "Artist", class: "connector" %>
-            <%= f.text_field :location, placeholder: "Location", class: "connector" %>
+            <%= f.text_field :location, placeholder: "Where? city/state/address", class: "connector" %>
             <%#= f.text_field :location, placeholder: "ip:119.23.23.23", class: "connector" %>
-            <%#= f.text_field :state, placeholder: "State", class: "connector" %>
             <%= f.submit "Filter", class: "btn btn-default connector" %>
           <% end %>
         </div>
@@ -22,15 +21,13 @@
       <h2>Advanced Search <i class="fa fa-search"></i></h2>
         <div class="tabbable">
           <div class="form">
-            <%= bootstrap_form_tag url: "/locations", method: "get" do |f| %>
-              <%= f.text_field :locations, placeholder: "Location", class: "connector" %>
-              <%#= f.text_field :city, placeholder: "City", class: "connector" %>
-              <%#= f.text_field :state, placeholder: "State", class: "connector" %>
-              <%#= f.text_field :venue, placeholder: "Venue", class: "connector" %>
-              <%#= f.text_field :start_date, placeholder: "End Date", class: "from_date connector", contenteditable: false %>
-              <%#= f.text_field :end_date, placeholder: "Start Date", class: "to_date connector", contenteditable: false %>
-              <%#= f.select     :event_type, options_for_select(event_type_helper), placeholder: "Event Type", class: "connector" %>
-              <%#= f.submit "Filter", class: "btn btn-default connector" %>
+            <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
+              <%= f.text_field :artist_name, placeholder: "Artist", class: "connector" %>
+              <%= f.text_field :location, placeholder: "Where? City/State/Address", class: "connector" %>
+              <%= f.text_field :min_date, placeholder: "Start Date", class: "connector", presence: true %>
+              <%= f.text_field :max_date, placeholder: "End Date", class: "connector",  presence: true %>
+              <%#= f.select    :event_type, options_for_select(event_type_helper), placeholder: "Event Type", class: "connector" %>
+              <%= f.submit "Filter", class: "btn btn-default connector" %>
            <% end %>
           </div>
         </div>
@@ -38,6 +35,8 @@
     </div>
   </div>
 
+  <%#= f.text_field :min_date, placeholder: "Start Date", class: "from_date connector", contenteditable: false, presence: true %>
+  <%#= f.text_field :min_date, placeholder: "End Date", class: "to_date connector", contenteditable: false, presen %>
 
 <!--
 <div class="row">

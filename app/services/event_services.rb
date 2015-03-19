@@ -16,6 +16,7 @@ class EventServices
 
   def self.events( options = {})
     songkick_events = "http://api.songkick.com/api/3.0/events.json"
+
     RestClient.get songkick_events, event_params(options)
   end
 
@@ -25,6 +26,7 @@ class EventServices
     output = Hash.new
     output["params"] = defaults.merge(options).reject { |k,v| v.nil? }
     output
+    
   end
 
   def self.defaults

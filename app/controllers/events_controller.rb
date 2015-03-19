@@ -1,8 +1,7 @@
 class EventsController < ApplicationController
 
   def index
-    # parse_location
-    # search_response = params[:artist_name]
+
     if params[:artist_name].nil? && params[:location].nil?
       @events = Event.all
     else
@@ -35,7 +34,7 @@ class EventsController < ApplicationController
 
   def filtering_params(params)
 
-    filtered = params.slice(:artist_name, :location).delete_if {|k,v| v.blank?}
+    filtered = params.slice(:artist_name, :location, :min_date, :max_date).delete_if {|k,v| v.blank?}
     return geocode_location(filtered) if filtered[:location]
     filtered
   end
@@ -53,15 +52,4 @@ end
 #   end
 # end#
 #end
-
-
-
-
-
-
-
-
-
-
-
 # params.delete_if {|k,v| v.nil?}
