@@ -10,9 +10,12 @@
         <% else %>
           <h1><%= @event.display_name %></h1></br>
           <div class="well event-show">
-          <%= @event.datetime %></br>
+          <%= @event.display_date %></br></br>
           <%= @event.artists.map(&:display_name).join(", ") %></br>
-          <%= link_to 'Find Tickets', @event.uri, class: "btn btn-info", target: "_blank" %>
+          <a class="btn btn-lg btn-info"  href=" <%= @event.uri %>">
+            <i class="fa fa-ticket"></i>
+            Find Tickets
+          </a>
         <% end %>
 
         <% if !current_user.nil? && current_user.events.include?(@event) %>

@@ -72,7 +72,9 @@ class Event < ActiveRecord::Base
   end
 
   def style_event_display
-    if event_type == "Concert"
+    if event_type.blank? && event_type == "Festicval"
+        self.datetime.strftime('%B %C, %Y')
+      event_type == "Concert"
       band, venue = display_name.split(" at ")
       self.artist = band
 
@@ -81,6 +83,10 @@ class Event < ActiveRecord::Base
 
       self.date = show_date[0..-2]
     end
+  end
+
+  def display_date
+    datetime.strftime('%B %C, %Y')
   end
 
   def parse_uri
