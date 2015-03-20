@@ -1,7 +1,8 @@
 class Event < ActiveRecord::Base
   reverse_geocoded_by :lat, :lng
   after_validation :reverse_geocode
-  # before_save :style_event_display
+  before_save :style_event_display
+  before_save :parse_uri
 
   has_many :artists_events
   has_many :artists, through: :artists_events
@@ -43,24 +44,25 @@ class Event < ActiveRecord::Base
 
     parsed_events.each do |event|
       created_event = find_or_create_by(
-        display_name: event["displayName"],
-        event_type:   event["type"],
-        lat:          event["venue"]["lat"],
-        lng:          event["venue"]["lng"],
-        datetime:     event["start"]["date"]
+      display_name: event["displayName"],
+      event_type:   event["type"],
+      lat:          event["venue"]["lat"],
+      lng:          event["venue"]["lng"],
+      datetime:     event["start"]["date"],
+      uri:          event["uri"]
       )
 
       created_event.venue = Venue.find_or_create_by(
-        display_name: event["venue"]["displayName"],
-        lat:          event["venue"]["lat"],
-        lng:          event["venue"]["lng"],
-        city:         event["venue"]["metroArea"]["displayName"],
-        country:      event["venue"]["metroArea"]["country"]["displayName"]
+      display_name: event["venue"]["displayName"],
+      lat:          event["venue"]["lat"],
+      lng:          event["venue"]["lng"],
+      city:         event["venue"]["metroArea"]["displayName"],
+      country:      event["venue"]["metroArea"]["country"]["displayName"]
       )
 
       event["performance"].each do |artist|
         artist = Artist.find_or_create_by(
-          display_name: artist["displayName"]
+        display_name: artist["displayName"]
         )
 
         ArtistsEvent.create(artist_id: artist.id, event_id: created_event.id)
@@ -69,23 +71,19 @@ class Event < ActiveRecord::Base
     return true
   end
 
-  # def style_event_display
-  #   artist, venue = display_name.split(" at ")
-  #   venue, date = venue.split("(")
-  #   date = date[0..-2]
-  #   save
-  # end
+  def style_event_display
+    if event_type == "Concert"
+      band, venue = display_name.split(" at ")
+      self.artist = band
+
+      place, show_date = venue.split("(")
+      self.show_name = place
+
+      self.date = show_date[0..-2]
+    end
+  end
+
+  def parse_uri
+    self.uri = uri.split("?")[0]
+  end
 end
-# results = Geocoder.coordinates(filtered[:location])
-#
-# lat = results[0]
-# lng = results[1]
-# location_filter = "geo:#{lat},#{lng}"
-# filtered[:location] = location_filter
-# filtered
-# end
-#
-# def self.location(filter_location)
-#   lat, lng = filter_location[4..-1].split(",")
-#   near([lat, lng], 100)
-# end

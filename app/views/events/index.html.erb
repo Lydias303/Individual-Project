@@ -28,7 +28,7 @@
             "properties": {
         "url": "<%= request.env['HTTP_HOST']%>/events/<%= ev.id %>",
         "marker-symbol": "<%= ev.event_type == "festival" ? "campsite" : "music" %>",
-        "marker-color": "<%= ev.event_type == "festival" ? "#ca6716" : "#ca6716" %>",
+        "marker-color": "<%= ev.event_type == "festival" ? "#e9620a" : "#e9620a" %>",
         "marker-size": "large",
         "display_name": "<%=  ev.display_name %><br>",
         "location": "<%=  ev.location %><br>",
@@ -45,10 +45,7 @@ myLayer.on('layeradd', function(e) {
 
     // Create custom popup content
     var popupContent =  '<a class="popup" href="http://' + feature.properties.url + '">' +
-                            '<img src="http://i.dailymail.co.uk/i/pix/2013/07/31/article-2381883-1B13BBC0000005DC-568_634x834.jpg' + feature.properties.image + '" />' +
                             feature.properties.display_name +
-                            feature.properties.city +
-                            feature.properties.state +
                             feature.properties.event_type +
                         '</a>';
 

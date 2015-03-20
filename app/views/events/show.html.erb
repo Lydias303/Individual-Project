@@ -1,20 +1,25 @@
-<h1> <%= @event.display_name %></h1>
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <div class="well event-show">
-
-        <%= @event.datetime  %></br>
-        <%= @event.age_restriction %></br>
-        <%= @event.popularity %></br>
-        <%= @event.city %></br>
+        <% if @event.event_type == "Concert" %>
+        <h1> <%= @event.artist %></h1>
+        <div class="well event-show">
+        <%= @event.show_name  %></br>
+        <%= @event.date %></br>
         <%= @event.artists.map(&:display_name).join(", ") %></br>
+        <%= link_to 'Find Tickets', @event.uri, class: "btn btn-info", target: "_blank" %>
+        <% else %>
+          <%= @event.display_name %></br>
+          <%= @event.datetime %></br>
+          <%= @event.artists.map(&:display_name).join(", ") %></br>
+          <%= link_to 'Find Tickets', @event.uri, class: "btn btn-info", target: "_blank" %>
+        <% end %>
 
         <% if !current_user.nil? && current_user.events.include?(@event) %>
         <h3> Liked </h3>
         <% elsif !current_user.nil? %>
         <%= render partial: 'shared/like_button', locals: {event: @event} %>
         <% else %>
-        <h5> Favorite This Festival By Loggin With Your Facebook Account! </h5>
+        <h5>Log in With Facebook To Like This Event! </h5>
         <% end %>
       </div>
     </div>
