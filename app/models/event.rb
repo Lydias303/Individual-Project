@@ -70,7 +70,6 @@ class Event < ActiveRecord::Base
   end
 
   # def style_event_display
-  #
   #   artist, venue = display_name.split(" at ")
   #   venue, date = venue.split("(")
   #   date = date[0..-2]
