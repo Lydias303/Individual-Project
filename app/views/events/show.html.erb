@@ -11,8 +11,10 @@
 
         <% if !current_user.nil? && current_user.events.include?(@event) %>
         <h3> Liked </h3>
-        <% else %>
+        <% elsif !current_user.nil? %>
         <%= render partial: 'shared/like_button', locals: {event: @event} %>
+        <% else %>
+        <h5> Favorite This Festival By Loggin With Your Facebook Account! </h5>
         <% end %>
       </div>
     </div>

@@ -1,11 +1,12 @@
 Geocoder.configure(
 
 :lookup => :bing,
-:api_key => "Al-ruqwG-2ZvGkKS7gjDDBj7HPUg-mts3ZBkmzJDYEzJXeDT8vjrHC5QFeSXYZq9",
 
-  :use_https=> true,
+:api_key => Figaro.env.bing_api_key,
 
-  :timeout=> 20
+:use_https => true,
+
+:timeout=> 20
   )
 
 
