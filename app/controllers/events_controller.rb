@@ -26,7 +26,7 @@ class EventsController < ApplicationController
     filtered[:location] = location_filter
     filtered
   end
-  
+
   private
 
   def filtering_params(params)

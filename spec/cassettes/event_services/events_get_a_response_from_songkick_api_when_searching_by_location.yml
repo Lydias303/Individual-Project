@@ -1,0 +1,173 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/events.json?apikey=QPKfALil1x0KaMOz&location=denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 01 Apr 2015 05:00:32 GMT
+      Status:
+      - 400 Bad Request
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Request-Id:
+      - 60b3870524c215942763042e127b9322
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAyyMQQrDMAwEvyJ08SU1iRso+BX5ghuU1DSOgiSfQv5et/Sw
+        LOwMe6KQ1s10SithPFEtWVWMSCIs2P27kUKqPwmnJKmQkYDbeE6WeXdQqho8
+        CXhvWcBeBAtL0QhO33EI99F14FbieAuDD6Ebe99/p3nLtFs+HHA7zEdzH74x
+        Pzi8rusDAAD//wMAM/y8iaIAAAA=
+    http_version: 
+  recorded_at: Wed, 01 Apr 2015 05:00:31 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/events.json?apikey=QPKfALil1x0KaMOz&min_date=2015-06-08
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 01 Apr 2015 05:03:52 GMT
+      Status:
+      - 400 Bad Request
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Request-Id:
+      - a6ab142a06543636f4ba4720844fda60
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAyyLOwrDQAwFr/JQs43JAXyKFOmDYhR7YT+gp01j9u4xIdUU
+        M3OKG0cJ3nU3WU9haAzKKubeXZY/L1ON/EXyODJxfX34ZqiDgZdhzx9rULxz
+        CfMFHNsBJZJ6ZMazabWE7kilbxq5t3STOecXAAD//wMAlbhLSoMAAAA=
+    http_version: 
+  recorded_at: Wed, 01 Apr 2015 05:03:52 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/events.json?apikey=QPKfALil1x0KaMOz&min_date=2015/06/08
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 01 Apr 2015 05:04:09 GMT
+      Status:
+      - 400 Bad Request
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Request-Id:
+      - ff2170ceb3faadbb685704d00a080d0b
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAyyLOwrDQAwFr/JQs43JAXyKFOmDYhR7YT+gp01j9u4xIdUU
+        M3OKG0cJ3nU3WU9haAzKKubeXZY/L1ON/EXyODJxfX34ZqiDgZdhzx9rULxz
+        CfMFHNsBJZJ6ZMazabWE7kilbxq5t3STOecXAAD//wMAlbhLSoMAAAA=
+    http_version: 
+  recorded_at: Wed, 01 Apr 2015 05:04:08 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/events.json?apikey=QPKfALil1x0KaMOz&max_date=2015/09/20&min_date=2015/06/08
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 01 Apr 2015 05:04:40 GMT
+      Status:
+      - 400 Bad Request
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Request-Id:
+      - 281b0d28926a430cdd34b7abb24f9066
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAwIAAAD//yyLOwrDQAwFr/JQs43JAXyKFOmDYhR7YT+gp01j
+        9u4xIdUUM3OKG0cJ3nU3WU9haAzKKubeXZY/L1ON/EXyODJxfX34ZqiDgZdh
+        zx9rULxzCfMFHNsBJZJ6ZMazabWE7kilbxq5t3STOecXAAD//wMAlbhLSoMA
+        AAA=
+    http_version: 
+  recorded_at: Wed, 01 Apr 2015 05:04:40 GMT
+recorded_with: VCR 2.9.3

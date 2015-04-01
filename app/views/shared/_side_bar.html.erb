@@ -11,7 +11,6 @@
           <%= bootstrap_form_tag url: "/events", method: "get" do |f| %>
           <%= f.text_field :artist_name, placeholder: "Artist", class: "connector" %>
           <%= f.text_field :location, placeholder: "Where? city/state/address", class: "connector" %>
-          <%#= f.text_field :location, placeholder: "ip:119.23.23.23", class: "connector" %>
           <%= f.submit "Filter", class: "btn btn-default connector" %>
           <% end %>
         </div>
