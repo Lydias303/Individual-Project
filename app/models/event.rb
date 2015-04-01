@@ -72,9 +72,9 @@ class Event < ActiveRecord::Base
   end
 
   def style_event_display
-    if event_type.blank? && event_type == "Festicval"
-        self.datetime.strftime('%B %C, %Y')
-      event_type == "Concert"
+    if event_type.blank? || event_type == "Festival"
+      self.datetime.strftime('%B %C, %Y')
+    else event_type == "Concert"
       band, venue = display_name.split(" at ")
       self.artist = band
 
