@@ -80,7 +80,7 @@ class Event < ActiveRecord::Base
 
       place, show_date = venue.split("(")
       self.show_name = place
-      self.date = show_date[0..-2] unless show_date = nil
+      self.date = show_date[0..-2] if !show_date.nil?
     end
   end
 
