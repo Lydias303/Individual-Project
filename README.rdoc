@@ -5,7 +5,7 @@ A short introduction of this app could easily go here.
 
 ## Prerequisites
 
-You will need to bundle, rake db:migrate to set up your database.
+You will need to bundle, rake db:setup to set up your database.
 
 ## Installation
 
