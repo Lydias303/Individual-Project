@@ -1,21 +1,21 @@
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <% if @event.event_type == "Concert" %>
-        <h1> <%= @event.artist %></h1>
-        <div class="well event-show">
-        <%= @event.show_name  %></br>
-        <%= @event.date %></br>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <% if @event.event_type == "Concert" %>
+    <h1> <%= @event.artist %></h1>
+    <div class="well event-show">
+      <%= @event.show_name  %></br>
+      <%= @event.date %></br>
+      <%= @event.artists.map(&:display_name).join(", ") %></br>
+      <%= link_to 'Find Tickets', @event.uri, class: "btn btn-lg btn-info", target: "_blank" %>
+      <% else %>
+      <h1><%= @event.display_name %></h1></br>
+      <div class="well event-show">
+        <%= @event.display_date %></br></br>
         <%= @event.artists.map(&:display_name).join(", ") %></br>
-        <%= link_to 'Find Tickets', @event.uri, class: "btn btn-lg btn-info", target: "_blank" %>
-        <% else %>
-          <h1><%= @event.display_name %></h1></br>
-          <div class="well event-show">
-          <%= @event.display_date %></br></br>
-          <%= @event.artists.map(&:display_name).join(", ") %></br>
-          <a class="btn btn-lg btn-info"  href=" <%= @event.uri %>">
-            <i class="fa fa-ticket"></i>
-            Find Tickets
-          </a>
+        <a class="btn btn-lg btn-info"  href=" <%= @event.uri %>">
+          <i class="fa fa-ticket"></i>
+          Find Tickets
+        </a>
         <% end %>
 
         <% if !current_user.nil? && current_user.events.include?(@event) %>

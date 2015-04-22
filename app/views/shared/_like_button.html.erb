@@ -1,5 +1,4 @@
-
-  <%= form_tag "/event_likes", method: :post do %>
+<%= form_tag "/event_likes", method: :post do %>
   <%= hidden_field_tag "eventsusers[event_id]", event.id %>
   <%= submit_tag 'Add To Likes', class: "btn btn-primary" %>
-  <% end %>
+<% end %>
