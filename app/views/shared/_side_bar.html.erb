@@ -21,30 +21,31 @@
       <div class="tabbable">
         <div class="form advancedSearch">
           <%= bootstrap_form_tag url: "/events", method: "get", html: {id: "advancedSearch"} do |f| %>
-            <%= f.text_field :artist_name, placeholder: "Artist", class: "connector" %>
-            <%= f.text_field :location, placeholder: "Where? City/State/Address", class: "connector" %>
-            <%= f.text_field :min_date, placeholder: "2015-MM-DD", class: "connector",  presence: true %>
-            <%= f.text_field :max_date, placeholder: "2015-MM-DD", class: "connector",  presence: true%>
-            <%= f.submit "Filter", class: "btn btn-default connector", id: "advancedSubmit" %>
+          <%= f.text_field :artist_name, placeholder: "Artist", class: "connector" %>
+          <%= f.text_field :location, placeholder: "Where? City/State/Address", class: "connector" %>
+          <%= f.text_field :min_date, placeholder: "2015-MM-DD", class: "connector",  presence: true %>
+          <%= f.text_field :max_date, placeholder: "2015-MM-DD", class: "connector",  presence: true%>
+          <%= f.submit "Filter", class: "btn btn-default connector", id: "advancedSubmit" %>
           <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      $(function($){
+        $("#max_date").mask("2015-99-99");
+        $("#min_date").mask("2015-99-99");
+      });
 
-<%= javascript_tag do %>
-$(document).ready(function() {
-  $(function($){
-    $("#max_date").mask("2015-99-99");
-    $("#min_date").mask("2015-99-99");
-  });
-
-  $("#advancedSubmit").on("click", function() {
-    if($(".advancedSearch #location").val() === "") {
-      alert("Please enter a location to search by date.");
-      return false;
-    }
-  })
-});
-<% end %>
+      $("#advancedSubmit").on("click", function() {
+        if($(".advancedSearch #location").val() === "") {
+          alert("Please enter a location to search by date.");
+          return false;
+        }
+      })
+    });
+  <% end %>
+</script>
