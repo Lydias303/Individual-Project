@@ -1,28 +1,22 @@
-== README
+# WookBook
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README outlines the details of collaborating on this Rails application.
+A short introduction of this app could easily go here.
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+You will need to bundle, rake db:migrate to set up your database.
 
-* System dependencies
+## Installation
 
-* Configuration
+* `git clone <repository-url>` this repository'
+* change into the new directory
 
-* Database creation
+## Running / Development
 
-* Database initialization
+* `rails server`
+* Visit your app at [http://localhost:3000](http://localhost:3000).
 
-* How to run the test suite
+### Running Tests
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* 'rspec'
