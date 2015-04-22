@@ -10,9 +10,4 @@ class User < ActiveRecord::Base
     user.save!
     user
   end
-
-  def user_event_like
-    # User.joins(:events_users).where(["event_id = ? ", event_id])
-    # Events_users.find(["event_id = ?", event_id])
-  end
 end
